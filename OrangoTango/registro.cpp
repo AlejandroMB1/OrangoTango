@@ -20,7 +20,7 @@ Registro::Registro(QWidget *parent) :
     QRegExp expreTelefono("((?:[0-9]{7}))");
     ui->Telefono->setValidator(new QRegExpValidator(expreTelefono,this));
 
-    QRegExp expreCorreo("((?:[a-z0-9_.]{1,10}[@]{1}[a-z.]{1,10}[a-z.]{1,10}))");
+    QRegExp expreCorreo("((?:[a-z0-9_.]{1,20}[@]{1}[a-z.]{1,20}[a-z.]{1,10}))");
     ui->Correo->setValidator(new QRegExpValidator(expreCorreo));
 
     QRegExp expreCelular("((?:[3]{1}[0-9]{9}))");
@@ -83,7 +83,7 @@ void Registro::on_BotonCrearC_clicked(){
         x = x+1;
     }
 
-    QRegularExpression expreCorreo("((?:[a-z0-9_.]{1,10}[@]{1}[a-z.]{1,10}[a-z.]{1,10}))");
+    QRegularExpression expreCorreo("((?:[a-z0-9_.]{1,20}[@]{1}[a-z.]{1,20}[a-z.]{1,10}))");
     QString correo = ui->Correo->text();
     if(!expreCorreo.match(correo).hasMatch() && correo != ""){
         QMessageBox::information(this,"Advertencia", "Correo no Valido");
