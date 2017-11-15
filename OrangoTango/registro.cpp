@@ -11,7 +11,7 @@ Registro::Registro(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QRegExp expreNombre("((?:[a-zA-Záéíóú]{1,10}//s[a-zA-Záéíóú]{1,10}))");
+    QRegExp expreNombre("((?:[a-zA-Záéíóú]{1,20}/\s/[a-zA-Záéíóú]{1,20}))");
     ui->Nombre->setValidator(new QRegExpValidator(expreNombre,this));
 
     QRegExp expreCedula("((?:[0-9]{8,10}))");
@@ -20,17 +20,17 @@ Registro::Registro(QWidget *parent) :
     QRegExp expreTelefono("((?:[0-9]{7}))");
     ui->Telefono->setValidator(new QRegExpValidator(expreTelefono,this));
 
-    QRegExp expreCorreo("((?:[a-z0-9_.]{1,10}[@]{1}[a-z.]{1,10}[a-z.]{1,10}))");
+    QRegExp expreCorreo("((?:[a-z0-9_.]{1,20}[@]{1}[a-z.]{1,15}[a-z.]{1,15}))");
     ui->Correo->setValidator(new QRegExpValidator(expreCorreo));
 
     QRegExp expreCelular("((?:[3]{1}[0-9]{9}))");
     ui->Celular->setValidator(new QRegExpValidator(expreCelular,this));
 
 
-    QRegExp expreUsuario("((?:[a-zA-Z0-9]{1,12}))");
+    QRegExp expreUsuario("((?:[a-zA-Z0-9]{1,20}))");
     ui->Usuario->setValidator(new QRegExpValidator(expreUsuario,this));
 
-    QRegExp expreContra("((?:[A-Z]{1}[a-zA-Z0-9._]{6,10}))");
+    QRegExp expreContra("((?:[A-Z]{1}[a-zA-Z0-9._]{6,20}))");
     ui->Contra->setValidator(new QRegExpValidator(expreContra,this));
 
 
@@ -107,7 +107,7 @@ void Registro::on_BotonCrearC_clicked(){
     QRegularExpression expreContra("((?:[A-Z]{1}[a-zA-Z0-9._]{6,10}))");
     QString contra = ui->Contra->text();
     if(!expreContra.match(contra).hasMatch() && contra != ""){
-        QMessageBox::information(this,"Advertencia", "Contrasena no Valida");
+        QMessageBox::information(this,"Advertencia", "Contraseña no Valida");
         x = x+1;
     }
 
@@ -124,4 +124,9 @@ void Registro::on_BotonCrearC_clicked(){
     //Verificar la correcta obtención de datos:
     //cout << (client -> getNombre().toStdString()) << endl;
 
+}
+
+void Registro::on_toolButton_clicked()
+{
+    QMessageBox::information(this,"Información","La contraseña debe tener la primer letra en Mayúscula");
 }

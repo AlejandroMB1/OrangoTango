@@ -20,6 +20,8 @@ public:
 private slots:
     void on_BotonCrearC_clicked();
 
+    void on_toolButton_clicked();
+
 private:
     Ui::Registro *ui;
 };

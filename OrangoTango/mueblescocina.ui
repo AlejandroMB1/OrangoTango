@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MueblesCocina</class>
+ <widget class="QDialog" name="MueblesCocina">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>929</width>
+    <height>1011</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">	#MueblesCocina{
+	
+	background-color: rgb(30, 30, 30);
+	}
+
+	#label, #label_2{
+		
+	color: rgb(255, 255, 255);
+	
+		
+	}
+	#commandLinkButton,#commandLinkButton_2,#commandLinkButton_3,#commandLinkButton_4{
+		
+	
+	gridline-color: rgb(0, 255, 0);
+	
+	color: rgb(255, 255, 255);
+	
+	selection-color: rgb(85, 255, 0);
+	}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>50</y>
+     <width>491</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Matura MT Script Capitals</family>
+     <pointsize>36</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Muebles para Cocina</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>381</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Verdana</family>
+     <pointsize>18</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Adquiera su producto Aqui!!</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>401</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/1.0/Imagenes/cocina1.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>600</y>
+     <width>401</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/1.0/Imagenes/cocina2.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>230</y>
+     <width>401</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/1.0/Imagenes/cocina3.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>600</y>
+     <width>401</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/1.0/Imagenes/cocina4.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="commandLinkButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>540</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar al Carrito</string>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="commandLinkButton_2">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>540</y>
+     <width>172</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar al Carrito</string>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="commandLinkButton_3">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>890</y>
+     <width>172</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Agregar al Carrito</string>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="commandLinkButton_4">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>900</y>
+     <width>172</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar al Carrito</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
