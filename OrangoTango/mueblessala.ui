@@ -13,6 +13,28 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">	#MueblesCocina{
+	
+	background-color: rgb(30, 30, 30);
+	}
+
+	#label, #label_2{
+		
+	color: rgb(255, 255, 255);
+	
+		
+	}
+	#commandLinkButton,#commandLinkButton_2,#commandLinkButton_3,#commandLinkButton_4{
+		
+	
+	gridline-color: rgb(0, 255, 0);
+	
+	color: rgb(255, 255, 255);
+	
+	selection-color: rgb(85, 255, 0);
+	}</string>
+  </property>
   <widget class="QLabel" name="MueblesSala_2">
    <property name="geometry">
     <rect>
