@@ -6,6 +6,7 @@ MueblesCocina::MueblesCocina(QWidget *parent) :
     ui(new Ui::MueblesCocina)
 {
     ui->setupUi(this);
+
 }
 
 MueblesCocina::~MueblesCocina()
