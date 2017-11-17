@@ -8,6 +8,7 @@ cuenta::cuenta(QWidget *parent) :
     ui(new Ui::cuenta)
 {
     ui->setupUi(this);
+
 }
 
 cuenta::~cuenta()
@@ -15,10 +16,8 @@ cuenta::~cuenta()
     delete ui;
 }
 
-
-void cuenta::on_pushButton_4_clicked()
+void cuenta::on_IralCatalogo_clicked()
 {
     VentCatalogo *ventana = new VentCatalogo(this);
-    /*ventana->setModal(true);*/
     ventana->show();
 }

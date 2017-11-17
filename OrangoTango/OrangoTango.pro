@@ -38,10 +38,7 @@ SOURCES += \
     windowempleado.cpp \
     carrito.cpp \
     catalogo.cpp \
-    ventcatalogo.cpp \
-    mueblessala.cpp \
-    mueblesbano.cpp \
-    productosvarios.cpp
+    ventcatalogo.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -57,10 +54,7 @@ HEADERS += \
     windowempleado.h \
     carrito.h \
     catalogo.h \
-    ventcatalogo.h \
-    mueblessala.h \
-    mueblesbano.h \
-    productosvarios.h
+    ventcatalogo.h
 
 FORMS += \
         mainwindow.ui \
@@ -71,8 +65,4 @@ FORMS += \
     cuenta.ui \
     inicio.ui \
     windowempleado.ui \
-    ventcatalogo.ui \
-    mueblescocina.ui \
-    mueblessala.ui \
-    mueblesbano.ui \
-    productosvarios.ui
+    ventcatalogo.ui

@@ -30,7 +30,7 @@ public:
     //void iniciarSesion(string usuario);
 
 private slots:
-    void on_pushButton_4_clicked();
+   void on_IralCatalogo_clicked();
 
 private:
     Ui::cuenta *ui;
@@ -39,3 +39,4 @@ private:
 };
 
 #endif // CUENTA_H
+
