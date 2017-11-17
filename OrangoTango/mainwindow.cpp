@@ -95,8 +95,3 @@ void MainWindow::on_BotonIniciarS_clicked()
 
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-   // Inicio *ventana = new Inicio(this);
-   // ventana->show();
-}

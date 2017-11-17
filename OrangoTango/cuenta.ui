@@ -19,40 +19,14 @@
   <widget class="QPushButton" name="IralCatalogo">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>300</y>
+     <x>60</x>
+     <y>310</y>
      <width>131</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
     <string>Ir al Catalogo</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="BuscarP">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>150</y>
-     <width>361</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>150</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Buscar Producto:</string>
    </property>
   </widget>
  </widget>
