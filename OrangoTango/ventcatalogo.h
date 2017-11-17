@@ -3,6 +3,7 @@
 
 #include <QScrollArea>
 
+
 namespace Ui {
 class VentCatalogo;
 }

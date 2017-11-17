@@ -39,7 +39,6 @@ SOURCES += \
     carrito.cpp \
     catalogo.cpp \
     ventcatalogo.cpp \
-    mueblescocina.cpp \
     mueblessala.cpp \
     mueblesbano.cpp \
     productosvarios.cpp
@@ -59,7 +58,6 @@ HEADERS += \
     carrito.h \
     catalogo.h \
     ventcatalogo.h \
-    mueblescocina.h \
     mueblessala.h \
     mueblesbano.h \
     productosvarios.h

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>519</width>
-    <height>457</height>
+    <width>604</width>
+    <height>395</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,41 +21,99 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>517</width>
-     <height>455</height>
+     <width>602</width>
+     <height>393</height>
     </rect>
    </property>
-   <widget class="QLabel" name="titulo">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>30</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>23</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Productos</string>
-    </property>
-   </widget>
-   <widget class="QScrollBar" name="verticalScrollBar">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>0</y>
-      <width>16</width>
-      <height>451</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>582</width>
+         <height>373</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>10</y>
+          <width>201</width>
+          <height>64</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Matura MT Script Capitals</family>
+          <pointsize>36</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Catálogo</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>230</y>
+          <width>401</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../../Downloads/1.0/Imagenes/cocina1.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>230</y>
+          <width>381</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../../Downloads/1.0/Imagenes/cocina3.jpg</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>160</y>
+          <width>421</width>
+          <height>64</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Matura MT Script Capitals</family>
+          <pointsize>26</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Muebles para Cocina:</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

@@ -2,11 +2,16 @@
 #define CUENTA_H
 
 #include <QDialog>
-#include <fstream>
-#include <iostream>
-#include <string>
+
+#include <ventana.h>
+#include <cliente.h>
+#include <registro.h>
+#include <cuenta.h>
 #include <stdlib.h>
-#include <mainwindow.h>
+#include <QString>
+#include <string>
+
+
 
 using namespace std;
 
@@ -23,6 +28,9 @@ public:
     explicit cuenta(QWidget *parent = 0);
     ~cuenta();
     //void iniciarSesion(string usuario);
+
+private slots:
+    void on_pushButton_4_clicked();
 
 private:
     Ui::cuenta *ui;

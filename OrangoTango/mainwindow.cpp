@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "inicio.h"
-#include <mueblescocina.h>
+#include <cuenta.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -86,7 +86,7 @@ void MainWindow::on_BotonIniciarS_clicked()
             QMessageBox::information(this,"Información","Contraseña errada");
         }
         else{
-            MueblesCocina *ventana = new MueblesCocina(this);
+            cuenta *ventana = new cuenta(this);
             ventana->setModal(true);
             ventana->show();
         }

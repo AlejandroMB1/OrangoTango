@@ -12,3 +12,16 @@ ProductosVarios::~ProductosVarios()
 {
     delete ui;
 }
+/*
+void ProductosVarios::on_commandLinkButton_clicked(Carrito *carro)
+{
+    Producto *mueble = new Producto(this);
+    carro->agregarProducto(mueble);
+}
+
+void ProductosVarios::on_commandLinkButton_2_clicked(Carrito *carro)
+{
+    Producto *mueble = new Producto(this);
+    carro->agregarProducto(mueble);
+}
+*/

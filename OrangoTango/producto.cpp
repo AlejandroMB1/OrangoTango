@@ -144,5 +144,3 @@ void Producto::crearPoducto(){
 
 
 
-
-
