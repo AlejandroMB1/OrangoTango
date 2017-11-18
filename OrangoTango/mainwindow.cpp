@@ -86,9 +86,10 @@ void MainWindow::on_BotonIniciarS_clicked()
             QMessageBox::information(this,"Información","Contraseña errada");
         }
         else{
+            /*
             cuenta *ventana = new cuenta(this);
             ventana->setModal(true);
-            ventana->show();
+            ventana->show();*/
         }
 
     }

@@ -13,6 +13,20 @@ Producto::Producto(){
 
 }
 
+Producto::Producto(QString micodigo,QString miDescripcion,QString miAlto,QString miAncho,QString miLargo,
+                   QString miColor,QString miPrecio,QString miCosto){
+
+    codigo = micodigo;
+    descripcion = miDescripcion;
+    alto = miAlto;
+    largo = miLargo;
+    ancho = miAncho;
+    color = miColor;
+    precioVenta = miPrecio;
+    costo = miCosto;
+
+}
+
 QString Producto::getCodigo(){
 
     return codigo;

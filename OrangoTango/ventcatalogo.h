@@ -3,7 +3,7 @@
 
 #include <QScrollArea>
 #include <carrito.h>
-Carrito *carro = new Carrito(this);
+
 
 namespace Ui {
 class VentCatalogo;

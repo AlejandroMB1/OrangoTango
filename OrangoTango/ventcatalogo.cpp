@@ -16,6 +16,20 @@ VentCatalogo::~VentCatalogo()
 
 void VentCatalogo::on_commandLinkButton_clicked()
 {
-    Producto *cocina = new Producto(this);
-    carro->agregarProducto(cocina);
+    string cod = "0115";
+    string descripcion= "meson";
+    string alto = "15cm";
+    string ancho = "15cm";
+    string color = "marron";
+    string precio = "300.000";
+    string costo = "350.000";
+    QString codigo = QString::fromStdString(cod);;
+    QString descript = QString::fromStdString(descripcion);
+    QString alt = QString::fromStdString(alto);
+    QString anch = QString::fromStdString(ancho);
+    QString col = QString::fromStdString(color);
+    QString prec = QString::fromStdString(precio);
+    QString cost = QString::fromStdString(costo);
+    /*Producto *cocina = new Producto(codigo,descript,alt,anch,col,prec,cost);*/
 }
+
