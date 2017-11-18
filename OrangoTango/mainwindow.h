@@ -32,7 +32,7 @@ private slots:
     void on_actionDormitorio_triggered();
     void on_BotonRegistrarse_clicked();
     void on_BotonIniciarS_clicked();
-    void on_pushButton_clicked();
+
 
 };
 

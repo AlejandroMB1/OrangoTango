@@ -22,7 +22,7 @@ class Producto{
 		QString costo;
 	
 	public:
-        Producto(QString micodigo, QString miDescripcion, QString miAlto, QString miAncho, QString miLargo, QString miColor, QString miPrecio, QString miCosto);
+        /*Producto(QString micodigo, QString miDescripcion, QString miAlto, QString miAncho, QString miLargo, QString miColor, QString miPrecio, QString miCosto);*/
         Producto();
         ~Producto();
 

@@ -12,7 +12,7 @@ Producto::Producto(){
 	costo = "";
 
 }
-
+/*
 Producto::Producto(QString micodigo,QString miDescripcion,QString miAlto,QString miAncho,QString miLargo,
                    QString miColor,QString miPrecio,QString miCosto){
 
@@ -26,7 +26,7 @@ Producto::Producto(QString micodigo,QString miDescripcion,QString miAlto,QString
     costo = miCosto;
 
 }
-
+*/
 QString Producto::getCodigo(){
 
     return codigo;
