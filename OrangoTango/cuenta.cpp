@@ -18,6 +18,6 @@ cuenta::~cuenta()
 
 void cuenta::on_IralCatalogo_clicked()
 {
-    //VentCatalogo *ventana = new VentCatalogo(this);
-    //ventana->show();
+    VentCatalogo *ventana = new VentCatalogo(this);
+    ventana->show();
 }

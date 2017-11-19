@@ -6,7 +6,6 @@
 #include <ventana.h>
 #include <cliente.h>
 #include <registro.h>
-#include <cuenta.h>
 #include <stdlib.h>
 #include <QString>
 #include <string>
@@ -34,7 +33,6 @@ private slots:
 
 private:
     Ui::cuenta *ui;
-
 
 };
 

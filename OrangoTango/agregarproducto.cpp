@@ -27,8 +27,8 @@ void AgregarProducto::on_BotonAgregarProducto_clicked(){
     producto->setColor(ui -> lineColor->text());
     producto->setPrecioVenta(ui -> linePrecio->text());
     producto->setCosto(ui -> lineCosto->text());
-
-     QMessageBox::information(this,"Información","Producto Creado Satisfactoriamente!!!");
-     AgregarProducto::close();
+    producto->crearPoducto();
+    QMessageBox::information(this,"Información","Producto Creado Satisfactoriamente!!!");
+    AgregarProducto::close();
 }
 //

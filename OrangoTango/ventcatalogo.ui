@@ -2,12 +2,15 @@
 <ui version="4.0">
  <class>VentCatalogo</class>
  <widget class="QScrollArea" name="VentCatalogo">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>690</width>
-    <height>570</height>
+    <width>691</width>
+    <height>579</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,8 +27,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>688</width>
-     <height>568</height>
+     <width>689</width>
+     <height>577</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -33,8 +36,38 @@
      <widget class="QScrollArea" name="scrollArea">
       <property name="styleSheet">
        <string notr="true">#scrollAreaWidgetContents_2{
-background-color: rgb(67, 67, 67);
-}</string>
+background-color: rgb(255, 255, 255);
+}
+
+	/*Estilos para el botón*/
+	#commandLinkButton,#commandLinkButton_10,#commandLinkButton_11,#commandLinkButton_12,#commandLinkButton_13,#commandLinkButton_14,#commandLinkButton_15,#commandLinkButton_3,#commandLinkButton_4,#commandLinkButton_9{
+		
+	background-color: rgb(143, 71, 0);
+		border-radius: 4px;
+		color: #fff;
+		font-family: 'Roboto';
+		font-size: 17px;
+	}
+	
+	
+	/*Definimos el estilo para un efecto hover sobre el botón,
+	este cambiará su background cuando pasemos el mouse por
+	encima*/
+	#commandLinkButton:hover,#commandLinkButton_10:hover,#commandLinkButton_11:hover,#commandLinkButton_12:hover,#commandLinkButton_13:hover,#commandLinkButton_14:hover,#commandLinkButton_15:hover,#commandLinkButton_3:hover,#commandLinkButton_4:hover,#commandLinkButton_9:hover{
+		
+	background-color: #ff7043;;
+	}
+
+	</string>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
@@ -45,29 +78,141 @@ background-color: rgb(67, 67, 67);
       <widget class="QWidget" name="scrollAreaWidgetContents_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>-650</y>
-         <width>962</width>
+         <x>-315</x>
+         <y>0</y>
+         <width>967</width>
          <height>2833</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
-        <item row="7" column="0" colspan="3">
-         <widget class="QLabel" name="label_8">
+        <item row="0" column="2" colspan="2">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>Matura MT Script Capitals</family>
+            <pointsize>36</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Catálogo</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4" rowspan="2">
+         <widget class="QLabel" name="label_16">
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/baño1.jpg</pixmap>
+           <pixmap>../../../Downloads/1.0/Imagenes/carrito.jpg</pixmap>
           </property>
          </widget>
         </item>
-        <item row="8" column="0">
-         <widget class="QCommandLinkButton" name="commandLinkButton_10">
+        <item row="0" column="5">
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Resumen</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QLabel" name="label_4">
           <property name="font">
            <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
+            <family>Matura MT Script Capitals</family>
+            <pointsize>26</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Muebles para Cocina:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../../../Downloads/1.0/Imagenes/cocina3.jpg</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3" colspan="3">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../../../Downloads/1.0/Imagenes/cocina1.jpg</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QCommandLinkButton" name="commandLinkButton">
+          <property name="font">
+           <font>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Agregar al Carrito</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QCommandLinkButton" name="commandLinkButton_4">
+          <property name="font">
+           <font>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Agregar al Carrito</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="3">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../../../Downloads/1.0/Imagenes/cocina4.jpg</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3" colspan="3">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../../../Downloads/1.0/Imagenes/cocina2.jpg</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QCommandLinkButton" name="commandLinkButton_3">
+          <property name="font">
+           <font>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Agregar al Carrito</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QCommandLinkButton" name="commandLinkButton_9">
+          <property name="font">
+           <font>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
            </font>
           </property>
           <property name="text">
@@ -88,12 +233,22 @@ background-color: rgb(67, 67, 67);
           </property>
          </widget>
         </item>
-        <item row="16" column="0">
-         <widget class="QCommandLinkButton" name="commandLinkButton_15">
+        <item row="7" column="0" colspan="3">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../../../Downloads/1.0/Imagenes/baño1.jpg</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QCommandLinkButton" name="commandLinkButton_10">
           <property name="font">
            <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
            </font>
           </property>
           <property name="text">
@@ -101,32 +256,49 @@ background-color: rgb(67, 67, 67);
           </property>
          </widget>
         </item>
-        <item row="13" column="0" colspan="3">
-         <widget class="QLabel" name="label_13">
-          <property name="styleSheet">
-           <string notr="true">#ventCatalogo{
-	
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
-}</string>
+        <item row="9" column="0" colspan="3">
+         <widget class="QLabel" name="label_9">
+          <property name="font">
+           <font>
+            <family>Matura MT Script Capitals</family>
+            <pointsize>26</pointsize>
+           </font>
           </property>
+          <property name="text">
+           <string>Muebles para Dormitorio:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="label_10">
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/vario1.jpg</pixmap>
+           <pixmap>../../../Downloads/1.0/Imagenes/armario.jpg</pixmap>
           </property>
          </widget>
         </item>
-        <item row="0" column="2" colspan="2">
-         <widget class="QLabel" name="label">
+        <item row="10" column="1" colspan="4">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../../../Downloads/1.0/Imagenes/armario2.jpg</pixmap>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0">
+         <widget class="QCommandLinkButton" name="commandLinkButton_11">
           <property name="font">
            <font>
-            <family>Matura MT Script Capitals</family>
-            <pointsize>36</pointsize>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
            </font>
           </property>
           <property name="text">
-           <string>Catálogo</string>
+           <string>Agregar al Carrito</string>
           </property>
          </widget>
         </item>
@@ -134,21 +306,8 @@ background-color: rgb(67, 67, 67);
          <widget class="QCommandLinkButton" name="commandLinkButton_12">
           <property name="font">
            <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Agregar al Carrito</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="3">
-         <widget class="QCommandLinkButton" name="commandLinkButton_4">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
            </font>
           </property>
           <property name="text">
@@ -169,111 +328,29 @@ background-color: rgb(67, 67, 67);
           </property>
          </widget>
         </item>
-        <item row="3" column="0">
-         <widget class="QCommandLinkButton" name="commandLinkButton">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
-           </font>
+        <item row="13" column="0" colspan="3">
+         <widget class="QLabel" name="label_13">
+          <property name="styleSheet">
+           <string notr="true">#ventCatalogo{
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));
+}</string>
           </property>
-          <property name="text">
-           <string>Agregar al Carrito</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0" colspan="3">
-         <widget class="QLabel" name="label_5">
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/cocina4.jpg</pixmap>
+           <pixmap>../../../Downloads/1.0/Imagenes/vario1.jpg</pixmap>
           </property>
          </widget>
         </item>
-        <item row="5" column="0">
-         <widget class="QCommandLinkButton" name="commandLinkButton_3">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Agregar al Carrito</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0" colspan="3">
-         <widget class="QLabel" name="label_3">
+        <item row="13" column="3">
+         <widget class="QLabel" name="label_14">
           <property name="text">
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/cocina3.jpg</pixmap>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="3">
-         <widget class="QCommandLinkButton" name="commandLinkButton_9">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Agregar al Carrito</string>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="0" colspan="4">
-         <widget class="QLabel" name="label_9">
-          <property name="font">
-           <font>
-            <family>Matura MT Script Capitals</family>
-            <pointsize>26</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Muebles para Dormitorio:</string>
-          </property>
-         </widget>
-        </item>
-        <item row="14" column="3">
-         <widget class="QCommandLinkButton" name="commandLinkButton_14">
-          <property name="font">
-           <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Agregar al Carrito</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="3" colspan="2">
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/cocina2.jpg</pixmap>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0" colspan="2">
-         <widget class="QLabel" name="label_4">
-          <property name="font">
-           <font>
-            <family>Matura MT Script Capitals</family>
-            <pointsize>26</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>Muebles para Cocina:</string>
+           <pixmap>../../../Downloads/1.0/Imagenes/vario3.jpg</pixmap>
           </property>
          </widget>
         </item>
@@ -281,8 +358,8 @@ background-color: rgb(67, 67, 67);
          <widget class="QCommandLinkButton" name="commandLinkButton_13">
           <property name="font">
            <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
            </font>
           </property>
           <property name="text">
@@ -290,23 +367,16 @@ background-color: rgb(67, 67, 67);
           </property>
          </widget>
         </item>
-        <item row="10" column="1" colspan="4">
-         <widget class="QLabel" name="label_11">
+        <item row="14" column="3">
+         <widget class="QCommandLinkButton" name="commandLinkButton_14">
+          <property name="font">
+           <font>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
           <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/armario2.jpg</pixmap>
-          </property>
-         </widget>
-        </item>
-        <item row="10" column="0">
-         <widget class="QLabel" name="label_10">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/armario.jpg</pixmap>
+           <string>Agregar al Carrito</string>
           </property>
          </widget>
         </item>
@@ -320,36 +390,16 @@ background-color: rgb(67, 67, 67);
           </property>
          </widget>
         </item>
-        <item row="2" column="3" colspan="2">
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/cocina1.jpg</pixmap>
-          </property>
-         </widget>
-        </item>
-        <item row="11" column="0">
-         <widget class="QCommandLinkButton" name="commandLinkButton_11">
+        <item row="16" column="0">
+         <widget class="QCommandLinkButton" name="commandLinkButton_15">
           <property name="font">
            <font>
-            <family>Segoe UI</family>
-            <pointsize>13</pointsize>
+            <family>Roboto</family>
+            <pointsize>-1</pointsize>
            </font>
           </property>
           <property name="text">
            <string>Agregar al Carrito</string>
-          </property>
-         </widget>
-        </item>
-        <item row="13" column="3">
-         <widget class="QLabel" name="label_14">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap>../../../Downloads/1.0/Imagenes/vario3.jpg</pixmap>
           </property>
          </widget>
         </item>

@@ -14,7 +14,7 @@ using namespace std;
 
 class Carrito{
 
-    private:
+    public:
 
     QVector <Producto*> productos;
 

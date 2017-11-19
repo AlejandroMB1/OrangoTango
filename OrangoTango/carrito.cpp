@@ -1,5 +1,6 @@
 #include "carrito.h"
 
+Carrito::Carrito(){}
 
 Producto* Carrito::mostrarResumen(){
 

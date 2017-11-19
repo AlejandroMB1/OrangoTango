@@ -2,7 +2,7 @@
 #define VENTANA_H
 
 #include <QDialog>
-
+#include <ventcatalogo.h>
 namespace Ui {
 class Ventana;
 }

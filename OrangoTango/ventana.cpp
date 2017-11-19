@@ -12,3 +12,9 @@ Ventana::~Ventana()
 {
     delete ui;
 }
+/*
+void Ventana::ResumenCarrito(){
+
+    VentCatalogo::
+}
+*/
