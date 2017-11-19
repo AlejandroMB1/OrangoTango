@@ -60,6 +60,7 @@ class Cliente{
 
        //Otros métodos:
        void registrarse();
+       void registrarUser();
 };
 
 #endif // CLIENTE_H

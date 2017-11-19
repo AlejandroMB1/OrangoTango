@@ -31,3 +31,4 @@ void AgregarProducto::on_BotonAgregarProducto_clicked(){
      QMessageBox::information(this,"Información","Producto Creado Satisfactoriamente!!!");
      AgregarProducto::close();
 }
+//

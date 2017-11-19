@@ -120,6 +120,7 @@ void Registro::on_BotonCrearC_clicked(){
 
     if(x==0){
         client->registrarse();
+        client->registrarUser();
         QMessageBox::information(this,"Información","Cuenta creada Satisfactoriamente!!!");
         Registro::close();
      }

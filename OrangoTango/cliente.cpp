@@ -140,10 +140,27 @@ void Cliente::registrarse(){
     archivo << "telefono: " << (this->getTelefono().toStdString()) << endl;
     archivo << "celular: " << (this->getCelular().toStdString()) << endl;
     archivo << "correo: " << (this->getCorreo().toStdString()) << endl;
+    archivo << "======================================================" << endl;
+    archivo.close();
+}
+
+void Cliente::registrarUser(){
+
+    ofstream archivo("EmpleadosBD.txt", ios::app);
+
+    if(archivo.fail()){
+        cout << "No se pudo abrir el archivo" << endl;
+        exit(1);
+    }
+    archivo << "======================================================"<<endl;
     archivo << "usuario: " << (this->getUsuario().toStdString()) << endl;
     archivo << "contrasenia: " << (this->getContrasenia().toStdString()) << endl;
     archivo << "palabra secreta: " << (this->getPalabraSecreta().toStdString()) << endl;
     archivo << "======================================================" << endl;
     archivo.close();
 }
+
+
+
+
 
