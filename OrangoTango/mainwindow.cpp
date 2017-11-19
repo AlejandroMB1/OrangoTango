@@ -96,3 +96,9 @@ void MainWindow::on_BotonIniciarS_clicked()
 
 }
 
+
+void MainWindow::on_atras_clicked()
+{
+    Inicio *ventana = new Inicio();
+    ventana->show();
+}

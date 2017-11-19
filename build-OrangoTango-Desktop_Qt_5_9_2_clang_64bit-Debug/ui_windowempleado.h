@@ -66,6 +66,8 @@ public:
         lineContra = new QLineEdit(centralwidget);
         lineContra->setObjectName(QStringLiteral("lineContra"));
         lineContra->setGeometry(QRect(340, 210, 131, 21));
+        lineContra->setEchoMode(QLineEdit::Password);
+        lineContra->setClearButtonEnabled(true);
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(0, 520, 113, 32));
@@ -80,6 +82,7 @@ public:
 
         retranslateUi(WindowEmpleado);
         QObject::connect(pushButton, SIGNAL(clicked()), WindowEmpleado, SLOT(close()));
+        QObject::connect(BotonIniciar, SIGNAL(clicked()), WindowEmpleado, SLOT(close()));
 
         QMetaObject::connectSlotsByName(WindowEmpleado);
     } // setupUi

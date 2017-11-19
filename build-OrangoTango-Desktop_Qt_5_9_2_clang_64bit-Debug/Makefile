@@ -63,14 +63,18 @@ SOURCES       = ../OrangoTango/main.cpp \
 		../OrangoTango/inicio.cpp \
 		../OrangoTango/windowempleado.cpp \
 		../OrangoTango/carrito.cpp \
-		../OrangoTango/catalogo.cpp moc_mainwindow.cpp \
+		../OrangoTango/catalogo.cpp \
+		../OrangoTango/ventcatalogo.cpp \
+		../OrangoTango/mainempresa.cpp moc_mainwindow.cpp \
 		moc_ventana.cpp \
 		moc_registro.cpp \
 		moc_agregarproducto.cpp \
 		moc_facturar.cpp \
 		moc_cuenta.cpp \
 		moc_inicio.cpp \
-		moc_windowempleado.cpp
+		moc_windowempleado.cpp \
+		moc_ventcatalogo.cpp \
+		moc_mainempresa.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		ventana.o \
@@ -85,6 +89,8 @@ OBJECTS       = main.o \
 		windowempleado.o \
 		carrito.o \
 		catalogo.o \
+		ventcatalogo.o \
+		mainempresa.o \
 		moc_mainwindow.o \
 		moc_ventana.o \
 		moc_registro.o \
@@ -92,7 +98,9 @@ OBJECTS       = main.o \
 		moc_facturar.o \
 		moc_cuenta.o \
 		moc_inicio.o \
-		moc_windowempleado.o
+		moc_windowempleado.o \
+		moc_ventcatalogo.o \
+		moc_mainempresa.o
 DIST          = /Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/qdevice.pri \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/features/device_config.prf \
@@ -272,7 +280,9 @@ DIST          = /Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/feature
 		../OrangoTango/inicio.h \
 		../OrangoTango/windowempleado.h \
 		../OrangoTango/carrito.h \
-		../OrangoTango/catalogo.h ../OrangoTango/main.cpp \
+		../OrangoTango/catalogo.h \
+		../OrangoTango/ventcatalogo.h \
+		../OrangoTango/mainempresa.h ../OrangoTango/main.cpp \
 		../OrangoTango/mainwindow.cpp \
 		../OrangoTango/ventana.cpp \
 		../OrangoTango/cliente.cpp \
@@ -285,7 +295,9 @@ DIST          = /Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/feature
 		../OrangoTango/inicio.cpp \
 		../OrangoTango/windowempleado.cpp \
 		../OrangoTango/carrito.cpp \
-		../OrangoTango/catalogo.cpp
+		../OrangoTango/catalogo.cpp \
+		../OrangoTango/ventcatalogo.cpp \
+		../OrangoTango/mainempresa.cpp
 QMAKE_TARGET  = OrangoTango
 DESTDIR       = 
 TARGET        = OrangoTango.app/Contents/MacOS/OrangoTango
@@ -299,7 +311,7 @@ EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ACTIVE_ARCHS), $(EXPORT_ACTIVE_
 first: all
 ####### Build rules
 
-$(TARGET): ui_mainwindow.h ui_ventana.h ui_registro.h ui_agregarproducto.h ui_facturar.h ui_cuenta.h ui_inicio.h ui_windowempleado.h $(OBJECTS)  
+$(TARGET): ui_mainwindow.h ui_ventana.h ui_registro.h ui_agregarproducto.h ui_facturar.h ui_cuenta.h ui_inicio.h ui_windowempleado.h ui_ventcatalogo.h ui_mainempresa.h $(OBJECTS)  
 	@test -d OrangoTango.app/Contents/MacOS/ || mkdir -p OrangoTango.app/Contents/MacOS/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
@@ -676,9 +688,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../OrangoTango/mainwindow.h ../OrangoTango/ventana.h ../OrangoTango/cliente.h ../OrangoTango/registro.h ../OrangoTango/producto.h ../OrangoTango/agregarproducto.h ../OrangoTango/factura.h ../OrangoTango/facturar.h ../OrangoTango/cuenta.h ../OrangoTango/inicio.h ../OrangoTango/windowempleado.h ../OrangoTango/carrito.h ../OrangoTango/catalogo.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../OrangoTango/main.cpp ../OrangoTango/mainwindow.cpp ../OrangoTango/ventana.cpp ../OrangoTango/cliente.cpp ../OrangoTango/registro.cpp ../OrangoTango/producto.cpp ../OrangoTango/agregarproducto.cpp ../OrangoTango/factura.cpp ../OrangoTango/facturar.cpp ../OrangoTango/cuenta.cpp ../OrangoTango/inicio.cpp ../OrangoTango/windowempleado.cpp ../OrangoTango/carrito.cpp ../OrangoTango/catalogo.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../OrangoTango/mainwindow.ui ../OrangoTango/ventana.ui ../OrangoTango/registro.ui ../OrangoTango/agregarproducto.ui ../OrangoTango/facturar.ui ../OrangoTango/cuenta.ui ../OrangoTango/inicio.ui ../OrangoTango/windowempleado.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../OrangoTango/mainwindow.h ../OrangoTango/ventana.h ../OrangoTango/cliente.h ../OrangoTango/registro.h ../OrangoTango/producto.h ../OrangoTango/agregarproducto.h ../OrangoTango/factura.h ../OrangoTango/facturar.h ../OrangoTango/cuenta.h ../OrangoTango/inicio.h ../OrangoTango/windowempleado.h ../OrangoTango/carrito.h ../OrangoTango/catalogo.h ../OrangoTango/ventcatalogo.h ../OrangoTango/mainempresa.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../OrangoTango/main.cpp ../OrangoTango/mainwindow.cpp ../OrangoTango/ventana.cpp ../OrangoTango/cliente.cpp ../OrangoTango/registro.cpp ../OrangoTango/producto.cpp ../OrangoTango/agregarproducto.cpp ../OrangoTango/factura.cpp ../OrangoTango/facturar.cpp ../OrangoTango/cuenta.cpp ../OrangoTango/inicio.cpp ../OrangoTango/windowempleado.cpp ../OrangoTango/carrito.cpp ../OrangoTango/catalogo.cpp ../OrangoTango/ventcatalogo.cpp ../OrangoTango/mainempresa.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../OrangoTango/mainwindow.ui ../OrangoTango/ventana.ui ../OrangoTango/registro.ui ../OrangoTango/agregarproducto.ui ../OrangoTango/facturar.ui ../OrangoTango/cuenta.ui ../OrangoTango/inicio.ui ../OrangoTango/windowempleado.ui ../OrangoTango/ventcatalogo.ui ../OrangoTango/mainempresa.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -710,9 +722,9 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/features/data/dummy.cpp
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -pipe -stdlib=libc++ -g -std=gnu++11 $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk -mmacosx-version-min=10.10 -Wall -W -dM -E -o moc_predefs.h /Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp moc_ventana.cpp moc_registro.cpp moc_agregarproducto.cpp moc_facturar.cpp moc_cuenta.cpp moc_inicio.cpp moc_windowempleado.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_ventana.cpp moc_registro.cpp moc_agregarproducto.cpp moc_facturar.cpp moc_cuenta.cpp moc_inicio.cpp moc_windowempleado.cpp moc_ventcatalogo.cpp moc_mainempresa.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp moc_ventana.cpp moc_registro.cpp moc_agregarproducto.cpp moc_facturar.cpp moc_cuenta.cpp moc_inicio.cpp moc_windowempleado.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_ventana.cpp moc_registro.cpp moc_agregarproducto.cpp moc_facturar.cpp moc_cuenta.cpp moc_inicio.cpp moc_windowempleado.cpp moc_ventcatalogo.cpp moc_mainempresa.cpp
 moc_mainwindow.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../OrangoTango/ventana.h \
@@ -727,7 +739,6 @@ moc_mainwindow.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidge
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		../OrangoTango/cuenta.h \
-		../OrangoTango/mainwindow.h \
 		../OrangoTango/mainwindow.h \
 		moc_predefs.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc
@@ -771,9 +782,6 @@ moc_facturar.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets
 
 moc_cuenta.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
-		../OrangoTango/mainwindow.h \
-		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
-		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../OrangoTango/ventana.h \
 		../OrangoTango/cliente.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QString \
@@ -783,7 +791,6 @@ moc_cuenta.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.f
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		../OrangoTango/cuenta.h \
 		../OrangoTango/cuenta.h \
 		moc_predefs.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc
@@ -796,18 +803,42 @@ moc_inicio.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.f
 		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc
 	/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/macx-clang -I/Users/germancaycedo/Documents/UNIVERSIDAD/S3/Objetos/Proyecto/OrangoTango/OrangoTango -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtGui.framework/Headers -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include -F/Users/germancaycedo/Applications/5.9.2/clang_64/lib ../OrangoTango/inicio.h -o moc_inicio.cpp
 
-moc_windowempleado.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
+moc_windowempleado.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QString \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		../OrangoTango/windowempleado.h \
 		moc_predefs.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc
 	/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/macx-clang -I/Users/germancaycedo/Documents/UNIVERSIDAD/S3/Objetos/Proyecto/OrangoTango/OrangoTango -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtGui.framework/Headers -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include -F/Users/germancaycedo/Applications/5.9.2/clang_64/lib ../OrangoTango/windowempleado.h -o moc_windowempleado.cpp
 
+moc_ventcatalogo.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QScrollArea \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qscrollarea.h \
+		../OrangoTango/carrito.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QVector \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qvector.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QString \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../OrangoTango/producto.h \
+		../OrangoTango/ventcatalogo.h \
+		moc_predefs.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc
+	/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/macx-clang -I/Users/germancaycedo/Documents/UNIVERSIDAD/S3/Objetos/Proyecto/OrangoTango/OrangoTango -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtGui.framework/Headers -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include -F/Users/germancaycedo/Applications/5.9.2/clang_64/lib ../OrangoTango/ventcatalogo.h -o moc_ventcatalogo.cpp
+
+moc_mainempresa.cpp: /Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../OrangoTango/mainempresa.h \
+		moc_predefs.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc
+	/Users/germancaycedo/Applications/5.9.2/clang_64/bin/moc $(DEFINES) --include ./moc_predefs.h -I/Users/germancaycedo/Applications/5.9.2/clang_64/mkspecs/macx-clang -I/Users/germancaycedo/Documents/UNIVERSIDAD/S3/Objetos/Proyecto/OrangoTango/OrangoTango -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtGui.framework/Headers -I/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/usr/include -F/Users/germancaycedo/Applications/5.9.2/clang_64/lib ../OrangoTango/mainempresa.h -o moc_mainempresa.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h ui_ventana.h ui_registro.h ui_agregarproducto.h ui_facturar.h ui_cuenta.h ui_inicio.h ui_windowempleado.h
+compiler_uic_make_all: ui_mainwindow.h ui_ventana.h ui_registro.h ui_agregarproducto.h ui_facturar.h ui_cuenta.h ui_inicio.h ui_windowempleado.h ui_ventcatalogo.h ui_mainempresa.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h ui_ventana.h ui_registro.h ui_agregarproducto.h ui_facturar.h ui_cuenta.h ui_inicio.h ui_windowempleado.h
+	-$(DEL_FILE) ui_mainwindow.h ui_ventana.h ui_registro.h ui_agregarproducto.h ui_facturar.h ui_cuenta.h ui_inicio.h ui_windowempleado.h ui_ventcatalogo.h ui_mainempresa.h
 ui_mainwindow.h: ../OrangoTango/mainwindow.ui \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/uic
 	/Users/germancaycedo/Applications/5.9.2/clang_64/bin/uic ../OrangoTango/mainwindow.ui -o ui_mainwindow.h
@@ -839,6 +870,14 @@ ui_inicio.h: ../OrangoTango/inicio.ui \
 ui_windowempleado.h: ../OrangoTango/windowempleado.ui \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/uic
 	/Users/germancaycedo/Applications/5.9.2/clang_64/bin/uic ../OrangoTango/windowempleado.ui -o ui_windowempleado.h
+
+ui_ventcatalogo.h: ../OrangoTango/ventcatalogo.ui \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/uic
+	/Users/germancaycedo/Applications/5.9.2/clang_64/bin/uic ../OrangoTango/ventcatalogo.ui -o ui_ventcatalogo.h
+
+ui_mainempresa.h: ../OrangoTango/mainempresa.ui \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/bin/uic
+	/Users/germancaycedo/Applications/5.9.2/clang_64/bin/uic ../OrangoTango/mainempresa.ui -o ui_mainempresa.h
 
 compiler_rez_source_make_all:
 compiler_rez_source_clean:
@@ -966,9 +1005,6 @@ facturar.o: ../OrangoTango/facturar.cpp ../OrangoTango/facturar.h \
 cuenta.o: ../OrangoTango/cuenta.cpp ../OrangoTango/cuenta.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
-		../OrangoTango/mainwindow.h \
-		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
-		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		../OrangoTango/ventana.h \
 		../OrangoTango/cliente.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QString \
@@ -978,7 +1014,14 @@ cuenta.o: ../OrangoTango/cuenta.cpp ../OrangoTango/cuenta.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
-		ui_cuenta.h
+		ui_cuenta.h \
+		../OrangoTango/ventcatalogo.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QScrollArea \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qscrollarea.h \
+		../OrangoTango/carrito.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QVector \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qvector.h \
+		../OrangoTango/producto.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cuenta.o ../OrangoTango/cuenta.cpp
 
 inicio.o: ../OrangoTango/inicio.cpp ../OrangoTango/inicio.h \
@@ -986,16 +1029,16 @@ inicio.o: ../OrangoTango/inicio.cpp ../OrangoTango/inicio.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		ui_inicio.h \
 		../OrangoTango/windowempleado.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QString \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		../OrangoTango/mainwindow.h \
 		../OrangoTango/ventana.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QDialog \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qdialog.h \
 		../OrangoTango/cliente.h \
-		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		../OrangoTango/registro.h \
-		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
-		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		../OrangoTango/cuenta.h \
@@ -1006,10 +1049,15 @@ inicio.o: ../OrangoTango/inicio.cpp ../OrangoTango/inicio.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o inicio.o ../OrangoTango/inicio.cpp
 
 windowempleado.o: ../OrangoTango/windowempleado.cpp ../OrangoTango/windowempleado.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QString \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		ui_windowempleado.h \
-		../OrangoTango/inicio.h
+		../OrangoTango/inicio.h \
+		../OrangoTango/mainempresa.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o windowempleado.o ../OrangoTango/windowempleado.cpp
 
 carrito.o: ../OrangoTango/carrito.cpp ../OrangoTango/carrito.h \
@@ -1035,6 +1083,24 @@ catalogo.o: ../OrangoTango/catalogo.cpp ../OrangoTango/catalogo.h \
 		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o catalogo.o ../OrangoTango/catalogo.cpp
 
+ventcatalogo.o: ../OrangoTango/ventcatalogo.cpp ../OrangoTango/ventcatalogo.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QScrollArea \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qscrollarea.h \
+		../OrangoTango/carrito.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QVector \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qvector.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/QString \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
+		../OrangoTango/producto.h \
+		ui_ventcatalogo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ventcatalogo.o ../OrangoTango/ventcatalogo.cpp
+
+mainempresa.o: ../OrangoTango/mainempresa.cpp ../OrangoTango/mainempresa.h \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
+		/Users/germancaycedo/Applications/5.9.2/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		ui_mainempresa.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainempresa.o ../OrangoTango/mainempresa.cpp
+
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
 
@@ -1058,6 +1124,12 @@ moc_inicio.o: moc_inicio.cpp
 
 moc_windowempleado.o: moc_windowempleado.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_windowempleado.o moc_windowempleado.cpp
+
+moc_ventcatalogo.o: moc_ventcatalogo.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_ventcatalogo.o moc_ventcatalogo.cpp
+
+moc_mainempresa.o: moc_mainempresa.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainempresa.o moc_mainempresa.cpp
 
 ####### Install
 

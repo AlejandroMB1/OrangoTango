@@ -1,6 +1,7 @@
 #include "windowempleado.h"
 #include "ui_windowempleado.h"
 #include "inicio.h"
+#include "mainempresa.h"
 
 WindowEmpleado::WindowEmpleado(QWidget *parent) :
     QMainWindow(parent),
@@ -71,9 +72,9 @@ void WindowEmpleado::on_BotonIniciar_clicked(){
         }
         else{
 
-            //cuenta *ventana = new cuenta(this);
-            //ventana->setModal(true);
-            //ventana->show();
+            MainEmpresa *Ventana = new MainEmpresa();
+            Ventana->show();
+
         }
 
     }

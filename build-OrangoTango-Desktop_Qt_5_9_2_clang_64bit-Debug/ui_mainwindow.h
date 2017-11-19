@@ -23,7 +23,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -40,13 +39,14 @@ public:
     QAction *actionConsultar_Proyecto;
     QAction *actionPreguntas_Frecuentes;
     QAction *actionCont_ctenos;
+    QAction *actionAcerca_de;
+    QAction *actionManuela_de_aplicaci_n;
     QWidget *centralWidget;
     QLabel *label_9;
     QLabel *label_2;
     QLineEdit *BuscarP;
     QLabel *label_6;
     QFrame *line_3;
-    QLabel *label_11;
     QLabel *label_10;
     QLineEdit *Usuario;
     QCommandLinkButton *BotonNDisenos;
@@ -63,13 +63,9 @@ public:
     QCommandLinkButton *BotonRegistrarse;
     QLabel *label_7;
     QFrame *line_4;
-    QPushButton *pushButton;
-    QLabel *label;
-    QToolBar *mainToolBar;
+    QPushButton *atras;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
-    QMenu *menuNuetros_Productos;
-    QMenu *menuProyectos;
     QMenu *menuAyuda;
 
     void setupUi(QMainWindow *MainWindow)
@@ -77,7 +73,51 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(770, 633);
-        MainWindow->setStyleSheet(QStringLiteral(""));
+        MainWindow->setStyleSheet(QString::fromUtf8("/*Cambiamos el color de la ventana*/\n"
+"\n"
+"	#MainWindow{\n"
+"	\n"
+"		\n"
+"		\n"
+"	background-color: rgb(255, 218, 158);\n"
+"		/*background-color: #009688;*/\n"
+"	    /*background-color: rgb(255, 128, 0);*/\n"
+"	    /*background-color: rgb(255, 79, 79);*/\n"
+"	}\n"
+"\n"
+"	/*Estilos para el bot\303\263n*/\n"
+"	#atras,#BotonIniciarS,#BotonNDisenos,#BotonProyectos,#BotonRegistrarse{\n"
+"		\n"
+"	background-color: rgb(143, 71, 0);\n"
+"		border-radius: 4px;\n"
+"		color: #fff;\n"
+"		font-family: 'Roboto';\n"
+"		font-size: 17px;\n"
+"	}\n"
+"	\n"
+"	\n"
+"	/*Definimos el estilo para un efecto hover sobre el bot\303\263n,\n"
+"	este cambiar\303\241 su background cuando pasemos el mouse por\n"
+"	encima*/\n"
+"	#atras:hover,#BotonIniciarS:hover,#BotonNDisenos:hover,#BotonProyectos:hover,#BotonRegistrarse:hover{\n"
+"		\n"
+"	background-color: #ff7043;;\n"
+"	}\n"
+"\n"
+"	\n"
+"	/*Definimos los estilos para los QLabel*/\n"
+"					\n"
+"\n"
+"	#Reloj{\n"
+"		\n"
+"		color: rgb(143, 71, 0);\n"
+"	}\n"
+"	\n"
+"	#frame,#frame_2,#frame_3,#fra"
+                        "me_4{\n"
+"	\n"
+"	background-color: rgb(143, 71, 0);\n"
+"	}"));
         MainWindow->setUnifiedTitleAndToolBarOnMac(false);
         actionDormitorio = new QAction(MainWindow);
         actionDormitorio->setObjectName(QStringLiteral("actionDormitorio"));
@@ -97,15 +137,22 @@ public:
         actionPreguntas_Frecuentes->setObjectName(QStringLiteral("actionPreguntas_Frecuentes"));
         actionCont_ctenos = new QAction(MainWindow);
         actionCont_ctenos->setObjectName(QStringLiteral("actionCont_ctenos"));
+        actionAcerca_de = new QAction(MainWindow);
+        actionAcerca_de->setObjectName(QStringLiteral("actionAcerca_de"));
+        actionManuela_de_aplicaci_n = new QAction(MainWindow);
+        actionManuela_de_aplicaci_n->setObjectName(QStringLiteral("actionManuela_de_aplicaci_n"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         centralWidget->setAutoFillBackground(false);
         label_9 = new QLabel(centralWidget);
         label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setGeometry(QRect(40, 410, 251, 31));
+        label_9->setGeometry(QRect(30, 420, 291, 31));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(260, 30, 271, 51));
+        QFont font;
+        font.setFamily(QStringLiteral("Matura MT Script Capitals"));
+        label_2->setFont(font);
         label_2->setStyleSheet(QLatin1String("border-color: rgb(255, 255, 255);\n"
 "gridline-color: rgb(85, 255, 255);"));
         BuscarP = new QLineEdit(centralWidget);
@@ -113,41 +160,45 @@ public:
         BuscarP->setGeometry(QRect(510, 170, 251, 21));
         label_6 = new QLabel(centralWidget);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(40, 320, 181, 31));
+        label_6->setGeometry(QRect(30, 300, 211, 31));
+        QFont font1;
+        font1.setFamily(QStringLiteral("MS Shell Dlg 2"));
+        font1.setPointSize(15);
+        label_6->setFont(font1);
         line_3 = new QFrame(centralWidget);
         line_3->setObjectName(QStringLiteral("line_3"));
         line_3->setGeometry(QRect(20, 230, 331, 20));
         line_3->setFrameShape(QFrame::HLine);
         line_3->setFrameShadow(QFrame::Sunken);
-        label_11 = new QLabel(centralWidget);
-        label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(30, 250, 161, 31));
         label_10 = new QLabel(centralWidget);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(380, 160, 131, 41));
+        label_10->setGeometry(QRect(340, 160, 161, 41));
         Usuario = new QLineEdit(centralWidget);
         Usuario->setObjectName(QStringLiteral("Usuario"));
         Usuario->setGeometry(QRect(510, 280, 161, 21));
         BotonNDisenos = new QCommandLinkButton(centralWidget);
         BotonNDisenos->setObjectName(QStringLiteral("BotonNDisenos"));
-        BotonNDisenos->setGeometry(QRect(300, 490, 172, 41));
-        QFont font;
-        font.setFamily(QStringLiteral("Segoe UI"));
-        font.setPointSize(12);
-        font.setItalic(true);
-        BotonNDisenos->setFont(font);
+        BotonNDisenos->setGeometry(QRect(300, 490, 191, 41));
+        QFont font2;
+        font2.setFamily(QStringLiteral("Roboto"));
+        BotonNDisenos->setFont(font2);
         BotonNDisenos->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(40, 290, 311, 41));
+        label_3->setGeometry(QRect(30, 260, 311, 41));
+        QFont font3;
+        font3.setFamily(QStringLiteral("MS Shell Dlg 2"));
+        font3.setPointSize(12);
+        label_3->setFont(font3);
         label_12 = new QLabel(centralWidget);
         label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setGeometry(QRect(60, 20, 131, 151));
-        label_12->setPixmap(QPixmap(QString::fromUtf8("../Imagenes/logo.png")));
+        label_12->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/logo.png")));
         Contra = new QLineEdit(centralWidget);
         Contra->setObjectName(QStringLiteral("Contra"));
         Contra->setGeometry(QRect(510, 350, 161, 20));
         Contra->setEchoMode(QLineEdit::Password);
+        Contra->setClearButtonEnabled(true);
         line_2 = new QFrame(centralWidget);
         line_2->setObjectName(QStringLiteral("line_2"));
         line_2->setGeometry(QRect(340, 240, 20, 221));
@@ -158,101 +209,60 @@ public:
         BotonIniciarS->setGeometry(QRect(530, 400, 121, 41));
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(500, 250, 71, 21));
+        label_4->setGeometry(QRect(500, 250, 91, 21));
+        QFont font4;
+        font4.setFamily(QStringLiteral("MS Shell Dlg 2"));
+        font4.setPointSize(14);
+        label_4->setFont(font4);
         label_8 = new QLabel(centralWidget);
         label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setGeometry(QRect(40, 380, 161, 31));
+        label_8->setGeometry(QRect(30, 380, 201, 31));
         label_14 = new QLabel(centralWidget);
         label_14->setObjectName(QStringLiteral("label_14"));
-        label_14->setGeometry(QRect(500, 310, 91, 31));
+        label_14->setGeometry(QRect(500, 310, 111, 31));
         line = new QFrame(centralWidget);
         line->setObjectName(QStringLiteral("line"));
-        line->setGeometry(QRect(20, 450, 331, 16));
+        line->setGeometry(QRect(20, 460, 331, 16));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
         BotonProyectos = new QCommandLinkButton(centralWidget);
         BotonProyectos->setObjectName(QStringLiteral("BotonProyectos"));
         BotonProyectos->setGeometry(QRect(30, 490, 231, 41));
-        BotonProyectos->setFont(font);
+        BotonProyectos->setFont(font2);
         BotonProyectos->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
         BotonRegistrarse = new QCommandLinkButton(centralWidget);
         BotonRegistrarse->setObjectName(QStringLiteral("BotonRegistrarse"));
         BotonRegistrarse->setGeometry(QRect(530, 490, 172, 41));
-        BotonRegistrarse->setFont(font);
+        BotonRegistrarse->setFont(font2);
         BotonRegistrarse->setStyleSheet(QStringLiteral("color: rgb(255, 255, 255);"));
         label_7 = new QLabel(centralWidget);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(40, 350, 181, 31));
+        label_7->setGeometry(QRect(30, 340, 211, 31));
         line_4 = new QFrame(centralWidget);
         line_4->setObjectName(QStringLiteral("line_4"));
         line_4->setGeometry(QRect(10, 240, 20, 221));
         line_4->setFrameShape(QFrame::VLine);
         line_4->setFrameShadow(QFrame::Sunken);
-        pushButton = new QPushButton(centralWidget);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(0, 540, 113, 32));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(0, 0, 771, 581));
-        label->setPixmap(QPixmap(QString::fromUtf8("../Imagenes/textura-de-madera-oscura-1553.jpg")));
+        atras = new QPushButton(centralWidget);
+        atras->setObjectName(QStringLiteral("atras"));
+        atras->setGeometry(QRect(0, 560, 113, 32));
         MainWindow->setCentralWidget(centralWidget);
-        label->raise();
-        label_9->raise();
-        label_2->raise();
-        BuscarP->raise();
-        label_6->raise();
-        line_3->raise();
-        label_11->raise();
-        label_10->raise();
-        Usuario->raise();
-        BotonNDisenos->raise();
-        label_3->raise();
-        label_12->raise();
-        Contra->raise();
-        line_2->raise();
-        BotonIniciarS->raise();
-        label_4->raise();
-        label_8->raise();
-        label_14->raise();
-        line->raise();
-        BotonProyectos->raise();
-        BotonRegistrarse->raise();
-        label_7->raise();
-        line_4->raise();
-        pushButton->raise();
-        mainToolBar = new QToolBar(MainWindow);
-        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 770, 22));
-        menuNuetros_Productos = new QMenu(menuBar);
-        menuNuetros_Productos->setObjectName(QStringLiteral("menuNuetros_Productos"));
-        menuProyectos = new QMenu(menuBar);
-        menuProyectos->setObjectName(QStringLiteral("menuProyectos"));
         menuAyuda = new QMenu(menuBar);
         menuAyuda->setObjectName(QStringLiteral("menuAyuda"));
         MainWindow->setMenuBar(menuBar);
 
-        menuBar->addAction(menuNuetros_Productos->menuAction());
-        menuBar->addAction(menuProyectos->menuAction());
         menuBar->addAction(menuAyuda->menuAction());
-        menuNuetros_Productos->addSeparator();
-        menuNuetros_Productos->addAction(actionDormitorio);
-        menuNuetros_Productos->addAction(actionSala);
-        menuNuetros_Productos->addAction(actionComedor);
-        menuNuetros_Productos->addAction(actionCocina);
-        menuNuetros_Productos->addAction(actionOficina_y_Estudio);
-        menuProyectos->addAction(actionIdeas);
-        menuProyectos->addAction(actionConsultar_Proyecto);
-        menuAyuda->addAction(actionPreguntas_Frecuentes);
-        menuAyuda->addAction(actionCont_ctenos);
+        menuAyuda->addAction(actionAcerca_de);
+        menuAyuda->addAction(actionManuela_de_aplicaci_n);
 
         retranslateUi(MainWindow);
-        QObject::connect(pushButton, SIGNAL(clicked()), MainWindow, SLOT(close()));
+        QObject::connect(atras, SIGNAL(clicked()), MainWindow, SLOT(close()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -269,29 +279,27 @@ public:
         actionConsultar_Proyecto->setText(QApplication::translate("MainWindow", "Consultar Cotizaci\303\263n", Q_NULLPTR));
         actionPreguntas_Frecuentes->setText(QApplication::translate("MainWindow", "Preguntas Frecuentes", Q_NULLPTR));
         actionCont_ctenos->setText(QApplication::translate("MainWindow", "Cont\303\241ctenos", Q_NULLPTR));
+        actionAcerca_de->setText(QApplication::translate("MainWindow", "Acerca de...", Q_NULLPTR));
+        actionManuela_de_aplicaci_n->setText(QApplication::translate("MainWindow", "Manuela de aplicaci\303\263n", Q_NULLPTR));
 #ifndef QT_NO_ACCESSIBILITY
         centralWidget->setAccessibleName(QString());
 #endif // QT_NO_ACCESSIBILITY
-        label_9->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">-Muebles Oficina y Estudio</span></p></body></html>", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:28pt; font-weight:600; color:#ffffff;\">OrangoTango</span></p></body></html>", Q_NULLPTR));
+        label_9->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#8f4700;\">-Muebles Oficina y Estudio</span></p></body></html>", Q_NULLPTR));
+        label_2->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:28pt; font-weight:600; color:#8f4700;\">OrangoTango</span></p></body></html>", Q_NULLPTR));
         BuscarP->setText(QString());
-        label_6->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">-Muebles para Sala</span></p></body></html>", Q_NULLPTR));
-        label_11->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; font-weight:600; color:#ffffff;\">Categor\303\255as:</span></p></body></html>", Q_NULLPTR));
-        label_10->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; color:#ffffff;\">Buscar Producto:</span></p></body></html>", Q_NULLPTR));
+        label_6->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#8f4700;\">-Muebles para Sala</span></p></body></html>", Q_NULLPTR));
+        label_10->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; color:#8f4700;\">Buscar Producto:</span></p></body></html>", Q_NULLPTR));
         BotonNDisenos->setText(QApplication::translate("MainWindow", "Nuestros Dise\303\261os", Q_NULLPTR));
-        label_3->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">-Muebles para Dormitorio</span></p></body></html>", Q_NULLPTR));
+        label_3->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#8f4700;\">-Muebles para Dormitorio</span></p></body></html>", Q_NULLPTR));
         label_12->setText(QString());
         BotonIniciarS->setText(QApplication::translate("MainWindow", "Iniciar Sesi\303\263n", Q_NULLPTR));
-        label_4->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:11pt; color:#ffffff;\">Usuario:</span></p></body></html>", Q_NULLPTR));
-        label_8->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">-Muebles Cocina</span></p></body></html>", Q_NULLPTR));
-        label_14->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:11pt; color:#ffffff;\">Contrase\303\261a:</span></p></body></html>", Q_NULLPTR));
+        label_4->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; color:#8f4700;\">Usuario:</span></p></body></html>", Q_NULLPTR));
+        label_8->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#8f4700;\">-Muebles Cocina</span></p></body></html>", Q_NULLPTR));
+        label_14->setText(QApplication::translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; color:#8f4700;\">Contrase\303\261a:</span></p></body></html>", Q_NULLPTR));
         BotonProyectos->setText(QApplication::translate("MainWindow", "Proyectos y Cotizaciones", Q_NULLPTR));
         BotonRegistrarse->setText(QApplication::translate("MainWindow", "Registrarse", Q_NULLPTR));
-        label_7->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#ffffff;\">-Muebles Comedor</span></p></body></html>", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("MainWindow", "Atras", Q_NULLPTR));
-        label->setText(QString());
-        menuNuetros_Productos->setTitle(QApplication::translate("MainWindow", "Categorias", Q_NULLPTR));
-        menuProyectos->setTitle(QApplication::translate("MainWindow", "Proyectos", Q_NULLPTR));
+        label_7->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#8f4700;\">-Muebles Comedor</span></p></body></html>", Q_NULLPTR));
+        atras->setText(QApplication::translate("MainWindow", "Atras", Q_NULLPTR));
         menuAyuda->setTitle(QApplication::translate("MainWindow", "Ayuda", Q_NULLPTR));
     } // retranslateUi
 

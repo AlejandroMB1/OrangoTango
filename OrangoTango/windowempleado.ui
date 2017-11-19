@@ -90,6 +90,12 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
@@ -132,6 +138,22 @@
     <hint type="destinationlabel">
      <x>143</x>
      <y>560</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BotonIniciar</sender>
+   <signal>clicked()</signal>
+   <receiver>WindowEmpleado</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>448</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>478</x>
+     <y>306</y>
     </hint>
    </hints>
   </connection>

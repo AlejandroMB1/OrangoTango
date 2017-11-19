@@ -34,6 +34,7 @@ private slots:
     void on_BotonIniciarS_clicked();
 
 
+    void on_atras_clicked();
 };
 
 
