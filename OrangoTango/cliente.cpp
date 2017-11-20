@@ -146,7 +146,7 @@ void Cliente::registrarse(){
 
 void Cliente::registrarUser(){
 
-    ofstream archivo("EmpleadosBD.txt", ios::app);
+    ofstream archivo("UsuariosBD.txt", ios::app);
 
     if(archivo.fail()){
         cout << "No se pudo abrir el archivo" << endl;

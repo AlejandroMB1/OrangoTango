@@ -1,60 +1,24 @@
 ======================================================
-cliente: ffsa
-fecha de nacimiento: sadf
-sexo: Hombre
-Estado civil: Soltero
-cedula: sadf
-Tarjeta de credito: 
-direccion: sadf
-telefono: asdf
-celular: safd
-correo: safd
-usuario: 1234
-contrasenia: 4321
-palabra secreta: numeros
-======================================================
-======================================================
-cliente: 
-fecha de nacimiento: 
-sexo: Hombre
-Estado civil: Soltero
-cedula: 
-Tarjeta de credito: 
-direccion: 
-telefono: 
-celular: 
-correo: 
-usuario: 0987
-contrasenia: 7890
-palabra secreta: 
-======================================================
-======================================================
-cliente: 
+cliente: alejo
 fecha de nacimiento: 1/1/00
 sexo: Hombre
 Estado civil: Soltero
-cedula: 
+cedula: 1124578512
 Tarjeta de credito: 
-direccion: 
-telefono: 
-celular: 
-correo: 
-usuario: 
-contrasenia: 
-palabra secreta: 
+direccion: cr 119
+telefono: 2214353
+celular: 3258521478
+correo: alejonnn@gmail.com
 ======================================================
 ======================================================
-cliente: german
+cliente: German
 fecha de nacimiento: 1/1/00
 sexo: Hombre
 Estado civil: Soltero
-cedula: 1107512144
+cedula: 1107511444
 Tarjeta de credito: 
-direccion: cr 116
-telefono: 3707061
-celular: 3234582882
-correo: gacaycedo@gmail.com
-usuario: german97
-contrasenia: Puchito1997
-palabra secreta: perro
+direccion: ca 116
+telefono: 3717164
+celular: 3458745545
+correo: german@gmail.com
 ======================================================

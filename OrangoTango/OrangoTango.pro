@@ -39,7 +39,9 @@ SOURCES += \
     carrito.cpp \
     catalogo.cpp \
     ventcatalogo.cpp \
-    mainempresa.cpp
+    mainempresa.cpp \
+    informes.cpp \
+    eliminarproducto.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -56,7 +58,9 @@ HEADERS += \
     carrito.h \
     catalogo.h \
     ventcatalogo.h \
-    mainempresa.h
+    mainempresa.h \
+    informes.h \
+    eliminarproducto.h
 
 FORMS += \
         mainwindow.ui \
@@ -68,4 +72,6 @@ FORMS += \
     inicio.ui \
     windowempleado.ui \
     ventcatalogo.ui \
-    mainempresa.ui
+    mainempresa.ui \
+    informes.ui \
+    eliminarproducto.ui

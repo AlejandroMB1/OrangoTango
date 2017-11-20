@@ -48,7 +48,7 @@ void MainWindow::on_BotonIniciarS_clicked()
         string contr = Qcontr.toStdString();
         int a = 0;
         int b = 0;
-        ifstream archivo("clientesBD.txt");
+        ifstream archivo("UsuariosBD.txt");
         if(!archivo.is_open()){
             QMessageBox::information(this,"Información","error, el archivo txt no se pudo abrir");
             exit(1);
