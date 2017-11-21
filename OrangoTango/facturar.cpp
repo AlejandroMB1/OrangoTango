@@ -1,6 +1,7 @@
 #include "facturar.h"
 #include "ui_facturar.h"
 #include "factura.h"
+#include "tarjeta.h"
 
 Facturar::Facturar(QWidget *parent) :
     QWidget(parent),
@@ -17,4 +18,12 @@ Facturar::Facturar(QWidget *parent) :
 Facturar::~Facturar()
 {
     delete ui;
+}
+
+void Facturar::on_BotonPagar_clicked()
+{
+
+    Tarjeta *ventana = new Tarjeta();
+    ventana->show();
+
 }

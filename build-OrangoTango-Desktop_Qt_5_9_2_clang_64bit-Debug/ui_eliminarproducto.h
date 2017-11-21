@@ -55,16 +55,17 @@ public:
         label_2->setGeometry(QRect(200, 100, 121, 16));
 
         retranslateUi(EliminarProducto);
+        QObject::connect(BotonAtras, SIGNAL(clicked()), EliminarProducto, SLOT(close()));
 
         QMetaObject::connectSlotsByName(EliminarProducto);
     } // setupUi
 
     void retranslateUi(QWidget *EliminarProducto)
     {
-        EliminarProducto->setWindowTitle(QApplication::translate("EliminarProducto", "Form", Q_NULLPTR));
+        EliminarProducto->setWindowTitle(QApplication::translate("EliminarProducto", "Eliminar Producto", Q_NULLPTR));
         BotonEliminar->setText(QApplication::translate("EliminarProducto", "Eliminar", Q_NULLPTR));
         label->setText(QApplication::translate("EliminarProducto", "Eliminar Producto", Q_NULLPTR));
-        BotonAtras->setText(QApplication::translate("EliminarProducto", "PushButton", Q_NULLPTR));
+        BotonAtras->setText(QApplication::translate("EliminarProducto", "Atras", Q_NULLPTR));
         label_2->setText(QApplication::translate("EliminarProducto", "Ingrese el Codigo", Q_NULLPTR));
     } // retranslateUi
 

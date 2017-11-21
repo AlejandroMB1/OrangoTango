@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[6];
-    char stringdata0[112];
+    char stringdata0[100];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,16 +32,16 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 29), // "on_actionDormitorio_triggered"
-QT_MOC_LITERAL(2, 41, 0), // ""
-QT_MOC_LITERAL(3, 42, 27), // "on_BotonRegistrarse_clicked"
-QT_MOC_LITERAL(4, 70, 24), // "on_BotonIniciarS_clicked"
-QT_MOC_LITERAL(5, 95, 16) // "on_atras_clicked"
+QT_MOC_LITERAL(1, 11, 27), // "on_BotonRegistrarse_clicked"
+QT_MOC_LITERAL(2, 39, 0), // ""
+QT_MOC_LITERAL(3, 40, 24), // "on_BotonIniciarS_clicked"
+QT_MOC_LITERAL(4, 65, 16), // "on_atras_clicked"
+QT_MOC_LITERAL(5, 82, 17) // "on_Buscar_clicked"
 
     },
-    "MainWindow\0on_actionDormitorio_triggered\0"
-    "\0on_BotonRegistrarse_clicked\0"
-    "on_BotonIniciarS_clicked\0on_atras_clicked"
+    "MainWindow\0on_BotonRegistrarse_clicked\0"
+    "\0on_BotonIniciarS_clicked\0on_atras_clicked\0"
+    "on_Buscar_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -79,10 +79,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_actionDormitorio_triggered(); break;
-        case 1: _t->on_BotonRegistrarse_clicked(); break;
-        case 2: _t->on_BotonIniciarS_clicked(); break;
-        case 3: _t->on_atras_clicked(); break;
+        case 0: _t->on_BotonRegistrarse_clicked(); break;
+        case 1: _t->on_BotonIniciarS_clicked(); break;
+        case 2: _t->on_atras_clicked(); break;
+        case 3: _t->on_Buscar_clicked(); break;
         default: ;
         }
     }

@@ -53,16 +53,6 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineCodigoP">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>170</y>
-     <width>191</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QDateTimeEdit" name="Fecha">
    <property name="geometry">
     <rect>
@@ -184,58 +174,13 @@
     <string>Cliente</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>150</y>
-     <width>131</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Codigo Producto</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BotonAgregar">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>161</y>
-     <width>81</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Agregar</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="BotonLimpiar">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>161</y>
-     <width>71</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Limpiar</string>
-   </property>
-  </widget>
   <widget class="QTableWidget" name="tablaProductos">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>220</y>
+     <y>180</y>
      <width>491</width>
-     <height>161</height>
+     <height>201</height>
     </rect>
    </property>
    <property name="rowCount">

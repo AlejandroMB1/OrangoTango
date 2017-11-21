@@ -26,7 +26,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    ventana.cpp \
     cliente.cpp \
     registro.cpp \
     producto.cpp \
@@ -41,11 +40,11 @@ SOURCES += \
     ventcatalogo.cpp \
     mainempresa.cpp \
     informes.cpp \
-    eliminarproducto.cpp
+    eliminarproducto.cpp \
+    tarjeta.cpp
 
 HEADERS += \
         mainwindow.h \
-    ventana.h \
     cliente.h \
     registro.h \
     producto.h \
@@ -60,11 +59,11 @@ HEADERS += \
     ventcatalogo.h \
     mainempresa.h \
     informes.h \
-    eliminarproducto.h
+    eliminarproducto.h \
+    tarjeta.h
 
 FORMS += \
         mainwindow.ui \
-    ventana.ui \
     registro.ui \
     agregarproducto.ui \
     facturar.ui \
@@ -74,4 +73,5 @@ FORMS += \
     ventcatalogo.ui \
     mainempresa.ui \
     informes.ui \
-    eliminarproducto.ui
+    eliminarproducto.ui \
+    tarjeta.ui

@@ -2,7 +2,6 @@
 #define ELIMINARPRODUCTO_H
 
 #include <QMainWindow>
-#include <ventana.h>
 #include <cliente.h>
 #include <registro.h>
 #include <cuenta.h>
@@ -29,6 +28,9 @@ public:
 
 private slots:
     void on_BotonEliminar_clicked();
+
+
+
 
 private:
     Ui::EliminarProducto *ui;

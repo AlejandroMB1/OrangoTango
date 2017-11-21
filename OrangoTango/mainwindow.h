@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <ventana.h>
 #include <cliente.h>
 #include <registro.h>
 #include <cuenta.h>
@@ -29,12 +28,13 @@ private:
     Ui::MainWindow *ui;
 
 private slots:
-    void on_actionDormitorio_triggered();
+   // void on_actionDormitorio_triggered();
     void on_BotonRegistrarse_clicked();
     void on_BotonIniciarS_clicked();
 
 
     void on_atras_clicked();
+    void on_Buscar_clicked();
 };
 
 

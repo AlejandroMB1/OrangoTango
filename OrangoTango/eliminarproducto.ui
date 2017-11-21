@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Eliminar Producto</string>
   </property>
   <widget class="QPushButton" name="BotonEliminar">
    <property name="geometry">
@@ -64,7 +64,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Atras</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -82,5 +82,22 @@
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>BotonAtras</sender>
+   <signal>clicked()</signal>
+   <receiver>EliminarProducto</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>110</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

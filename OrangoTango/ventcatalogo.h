@@ -4,9 +4,12 @@
 #include <QScrollArea>
 #include <carrito.h>
 #include <cuenta.h>
+#include "facturar.h"
 #include <fstream>
 #include <stdlib.h>
 #include <string>
+#include <QTableWidget>
+#include <QWidget>
 
 namespace Ui {
 class VentCatalogo;
@@ -42,6 +45,8 @@ private slots:
     void on_commandLinkButton_15_clicked();
 
     void on_pushButton_clicked();
+
+    void on_Pagar_clicked();
 
 private:
     Ui::VentCatalogo *ui;

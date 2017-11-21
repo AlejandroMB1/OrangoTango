@@ -119,15 +119,14 @@ void Producto::crearPoducto(){
         exit(1);
     }
     archivo << "======================================================"<<endl;
-    archivo << "Codigo " << (this->getCodigo().toStdString())<< endl;
-    archivo << "Descripción: " << (this->getDescripcion().toStdString()) << endl;
+    archivo << "Codigo: " << (this->getCodigo().toStdString())<< endl;
+    archivo << "Nombre: " << (this->getDescripcion().toStdString()) << endl;
     archivo << "Alto: " << (this->getAlto().toStdString()) << endl;
     archivo << "Largo: " << (this->getLargo().toStdString()) << endl;
     archivo << "Ancho: " << (this->getAncho().toStdString()) << endl;
     archivo << "Color: " << (this->getColor().toStdString()) << endl;
-    archivo << "Precio de Venta: " << (this->getPrecioVenta().toStdString()) << endl;
+    archivo << "PreciodeVenta: " << (this->getPrecioVenta().toStdString()) << endl;
     archivo << "Costo: " << (this->getCosto().toStdString()) << endl;
-    archivo << "======================================================" << endl;
     archivo.close();
 }
 

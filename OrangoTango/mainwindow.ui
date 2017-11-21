@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>770</width>
+    <width>788</width>
     <height>633</height>
    </rect>
   </property>
@@ -27,7 +27,7 @@
 	}
 
 	/*Estilos para el botón*/
-	#atras,#BotonIniciarS,#BotonNDisenos,#BotonProyectos,#BotonRegistrarse{
+	#atras,#BotonIniciarS,#BotonNDisenos,#BotonProyectos,#BotonRegistrarse,#Buscar{
 		
 	background-color: rgb(143, 71, 0);
 		border-radius: 4px;
@@ -40,7 +40,7 @@
 	/*Definimos el estilo para un efecto hover sobre el botón,
 	este cambiará su background cuando pasemos el mouse por
 	encima*/
-	#atras:hover,#BotonIniciarS:hover,#BotonNDisenos:hover,#BotonProyectos:hover,#BotonRegistrarse:hover{
+	#atras:hover,#BotonIniciarS:hover,#BotonNDisenos:hover,#BotonProyectos:hover,#BotonRegistrarse:hover,#Buscar:hover{
 		
 	background-color: #ff7043;;
 	}
@@ -412,6 +412,19 @@ gridline-color: rgb(85, 255, 255);</string>
      <string>Atras</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="Buscar">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>200</y>
+      <width>113</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Buscar</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QMenuBar" name="menuBar">
@@ -419,7 +432,7 @@ gridline-color: rgb(85, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>770</width>
+     <width>788</width>
      <height>22</height>
     </rect>
    </property>

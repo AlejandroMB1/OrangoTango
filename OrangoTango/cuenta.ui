@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Cuenta</string>
   </property>
   <property name="styleSheet">
    <string notr="true">/*Cambiamos el color de la ventana*/
@@ -25,7 +25,7 @@
 	}
 
 	/*Estilos para el botón*/
-	#IralCatalogo,#pushButton,#pushButton_2,#pushButton_3{
+	#IralCatalogo,#pushButton,#pushButton_2,#cerrar,#pushButton_3{
 		background-color: rgb(143, 71, 0);
 		border-radius: 4px;
 		color: #fff;
@@ -37,7 +37,7 @@
 	/*Definimos el estilo para un efecto hover sobre el botón,
 	este cambiará su background cuando pasemos el mouse por
 	encima*/
-	#IralCatalogo:hover,#pushButton:hover,#pushButton_2:hover,#pushButton_3:hove{
+	#IralCatalogo:hover,#pushButton:hover,#pushButton_2:hover,#pushButton_3:hove,#cerrar:hove{
 		
 	background-color: #ff7043;;
 	}
@@ -226,7 +226,37 @@
     <string>...</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="cerrar">
+   <property name="geometry">
+    <rect>
+     <x>502</x>
+     <y>360</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cerrar Sesión</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>cerrar</sender>
+   <signal>clicked()</signal>
+   <receiver>cuenta</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>577</x>
+     <y>394</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>595</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

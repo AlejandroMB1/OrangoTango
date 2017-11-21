@@ -1,5 +1,6 @@
 #include "eliminarproducto.h"
 #include "ui_eliminarproducto.h"
+#include "mainempresa.h"
 
 EliminarProducto::EliminarProducto(QWidget *parent) :
     QWidget(parent),
@@ -24,6 +25,7 @@ void EliminarProducto::on_BotonEliminar_clicked(){
 
         string separar;
         string separar2;
+
         string codig;
         string descri;
         string Alto;
@@ -32,6 +34,14 @@ void EliminarProducto::on_BotonEliminar_clicked(){
         string Color;
         string Precio;
         string Costo;
+        string codig1;
+        string descri1;
+        string Alto1;
+        string Largo1;
+        string Ancho1;
+        string Color1;
+        string Precio1;
+        string Costo1;
 
         QString QCodigo = ui->lineCodigo->text();
         string Codigo = QCodigo.toStdString();
@@ -50,37 +60,37 @@ void EliminarProducto::on_BotonEliminar_clicked(){
         }
 
         archivo>>separar;
-        archivo>>codig;
+        archivo>>codig>>codig1;
 
         while(!archivo.eof()){
 
-            archivo>>descri;
-            archivo>>Alto;
-            archivo>>Largo;
-            archivo>>Ancho;
-            archivo>>Color;
-            archivo>>Precio;
-            archivo>>Costo;
+            archivo>>descri>>descri1;
+            archivo>>Alto>>Alto1;
+            archivo>>Largo>>Largo1;
+            archivo>>Ancho>>Ancho1;
+            archivo>>Color>>Color1;
+            archivo>>Precio>>Precio1;
+            archivo>>Costo>>Costo1;
             archivo>>separar2;
 
-            if(Codigo==codig){
-
+            if(Codigo==codig1){
                  QMessageBox::information(this,"Información","El producto se ha eliminado correctamente");
 
             }
             else{
                 archivoTemp<<separar<<endl;
-                archivoTemp<<codig<<endl;
-                archivoTemp<<descri<<endl;
-                archivoTemp<<Alto<<endl;
-                archivoTemp<<Largo<<endl;
-                archivoTemp<<Ancho<<endl;
-                archivoTemp<<Color<<endl;
-                archivoTemp<<Precio<<endl;
-                archivoTemp<<Costo<<endl;
-                archivoTemp<<separar2<<endl;
+                archivoTemp<<codig<<" "<<codig1<<endl;
+                archivoTemp<<descri<<" "<<descri1<<endl;
+                archivoTemp<<Alto<<" "<<Alto1<<endl;
+                archivoTemp<<Largo<<" "<<Largo1<<endl;
+                archivoTemp<<Ancho<<" "<<Ancho1<<endl;
+                archivoTemp<<Color<<" "<<Color1<<endl;
+                archivoTemp<<Precio<<" "<<Precio1<<endl;
+                archivoTemp<<Costo<<" "<<Costo1<<endl;
+
+
             }
-            archivo>>codig;
+            archivo>>codig>>codig1;
         }
 
         archivo.close();
@@ -92,7 +102,7 @@ void EliminarProducto::on_BotonEliminar_clicked(){
 
     }
 
-
-
-
 }
+
+
+

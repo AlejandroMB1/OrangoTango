@@ -1,3 +1,4 @@
+
 ======================================================
 Codigo: 8452587
 Nombre: Mesa
@@ -17,11 +18,11 @@ Color: Nergro
 PreciodeVenta: 855
 Costo: 2333
 ======================================================
-Codigo: 68454
-Nombre: meson
-Alto: 354
-Largo: 53
-Ancho: 45
-Color: Blanco
-PreciodeVenta: 30000
-Costo: 200
+Codigo: 86745
+Nombre: cama
+Alto: 8645
+Largo: 864
+Ancho: 54
+Color: Gris
+PreciodeVenta: 5444
+Costo: 555

@@ -1,6 +1,7 @@
 #include "cuenta.h"
 #include "ui_cuenta.h"
 #include "ventcatalogo.h"
+#include "mainwindow.h"
 
 
 cuenta::cuenta(QWidget *parent) :
@@ -18,6 +19,12 @@ cuenta::~cuenta()
 
 void cuenta::on_IralCatalogo_clicked()
 {
-    VentCatalogo *ventana = new VentCatalogo(this);
+    VentCatalogo *ventana = new VentCatalogo();
+    ventana->show();
+}
+
+void cuenta::on_cerrar_clicked()
+{
+    MainWindow *ventana = new MainWindow();
     ventana->show();
 }

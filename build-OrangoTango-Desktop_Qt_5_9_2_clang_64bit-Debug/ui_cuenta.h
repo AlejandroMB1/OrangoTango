@@ -35,6 +35,7 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QToolButton *toolButton;
+    QPushButton *cerrar;
 
     void setupUi(QDialog *cuenta)
     {
@@ -52,7 +53,7 @@ public:
 "	}\n"
 "\n"
 "	/*Estilos para el bot\303\263n*/\n"
-"	#IralCatalogo,#pushButton,#pushButton_2,#pushButton_3{\n"
+"	#IralCatalogo,#pushButton,#pushButton_2,#cerrar,#pushButton_3{\n"
 "		background-color: rgb(143, 71, 0);\n"
 "		border-radius: 4px;\n"
 "		color: #fff;\n"
@@ -64,7 +65,7 @@ public:
 "	/*Definimos el estilo para un efecto hover sobre el bot\303\263n,\n"
 "	este cambiar\303\241 su background cuando pasemos el mouse por\n"
 "	encima*/\n"
-"	#IralCatalogo:hover,#pushButton:hover,#pushButton_2:hover,#pushButton_3:hove{\n"
+"	#IralCatalogo:hover,#pushButton:hover,#pushButton_2:hover,#pushButton_3:hove,#cerrar:hove{\n"
 "		\n"
 "	background-color: #ff7043;;\n"
 "	}\n"
@@ -78,7 +79,8 @@ public:
 "	background-color: rgb(255, 255, 255);\n"
 "	\n"
 "	\n"
-"	}\n"
+""
+                        "	}\n"
 "\n"
 ""));
         IralCatalogo = new QPushButton(cuenta);
@@ -124,15 +126,19 @@ public:
         toolButton = new QToolButton(cuenta);
         toolButton->setObjectName(QStringLiteral("toolButton"));
         toolButton->setGeometry(QRect(400, 290, 25, 19));
+        cerrar = new QPushButton(cuenta);
+        cerrar->setObjectName(QStringLiteral("cerrar"));
+        cerrar->setGeometry(QRect(502, 360, 121, 41));
 
         retranslateUi(cuenta);
+        QObject::connect(cerrar, SIGNAL(clicked()), cuenta, SLOT(close()));
 
         QMetaObject::connectSlotsByName(cuenta);
     } // setupUi
 
     void retranslateUi(QDialog *cuenta)
     {
-        cuenta->setWindowTitle(QApplication::translate("cuenta", "Dialog", Q_NULLPTR));
+        cuenta->setWindowTitle(QApplication::translate("cuenta", "Cuenta", Q_NULLPTR));
         IralCatalogo->setText(QApplication::translate("cuenta", "Ir al Catalogo", Q_NULLPTR));
         label_2->setText(QApplication::translate("cuenta", "Datos Personales:", Q_NULLPTR));
         label_3->setText(QString());
@@ -144,6 +150,7 @@ public:
         pushButton_2->setText(QApplication::translate("cuenta", "Cambiar", Q_NULLPTR));
         pushButton_3->setText(QApplication::translate("cuenta", "Cambiar", Q_NULLPTR));
         toolButton->setText(QApplication::translate("cuenta", "...", Q_NULLPTR));
+        cerrar->setText(QApplication::translate("cuenta", "Cerrar Sesi\303\263n", Q_NULLPTR));
     } // retranslateUi
 
 };

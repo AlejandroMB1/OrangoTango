@@ -22,12 +22,10 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_actionDormitorio_triggered()
-{
-    Ventana *dormitorio = new Ventana(this);
-    dormitorio->setModal(true);
-    dormitorio->show();
-}
+//void MainWindow::on_actionDormitorio_triggered()
+//{
+
+//}
 
 void MainWindow::on_BotonRegistrarse_clicked()
 {
@@ -87,8 +85,7 @@ void MainWindow::on_BotonIniciarS_clicked()
         }
         else{
 
-            cuenta *ventana = new cuenta(this);
-            ventana->setModal(true);
+            cuenta *ventana = new cuenta();
             ventana->show();
         }
 
@@ -102,3 +99,38 @@ void MainWindow::on_atras_clicked()
     Inicio *ventana = new Inicio();
     ventana->show();
 }
+
+void MainWindow::on_Buscar_clicked(){
+
+    if(ui -> BuscarP -> text() == ""){
+        QMessageBox::information(this,"Información","Debe ingresar el nombre del producto");
+    }
+    else{
+        QString QProduc = ui -> BuscarP -> text();
+        string Produc = QProduc.toStdString();
+
+        ifstream archivoP("ProductosBD.txt");
+        if(!archivoP.is_open()){
+            QMessageBox::information(this,"Información","error, el archivo txt no se pudo abrir");
+            exit(1);
+        }
+        string linea;
+        int s= 0;
+        while(getline(archivoP,linea)){
+            if(linea.find(Produc) != string::npos){
+                s=1;
+                QMessageBox::information(this,"Información","El Producto esta disponible, Por favor Inicie sesión y busquelo en el catálogo");
+             }
+        }
+        if(s == 0){
+            QMessageBox::information(this,"Información","Producto no Encontrado");
+        }
+        else{
+
+        //abrir ventada
+        }
+    }
+}
+
+
+

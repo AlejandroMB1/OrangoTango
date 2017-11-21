@@ -3,7 +3,7 @@
 
 #include <QDialog>
 
-#include <ventana.h>
+
 #include <cliente.h>
 #include <registro.h>
 #include <stdlib.h>
@@ -30,6 +30,8 @@ public:
 
 private slots:
    void on_IralCatalogo_clicked();
+
+   void on_cerrar_clicked();
 
 private:
     Ui::cuenta *ui;

@@ -8,6 +8,12 @@ WindowEmpleado::WindowEmpleado(QWidget *parent) :
     ui(new Ui::WindowEmpleado)
 {
     ui->setupUi(this);
+
+    QRegExp expreUsuario("((?:[a-zA-Z0-9]{1,20}))");
+    ui->lineUsuario->setValidator(new QRegExpValidator(expreUsuario,this));
+
+    QRegExp expreContra("((?:[A-Z]{1}[a-zA-Z0-9._]{6,20}))");
+    ui->lineContra->setValidator(new QRegExpValidator(expreContra,this));
 }
 
 WindowEmpleado::~WindowEmpleado()

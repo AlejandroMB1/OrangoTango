@@ -19,6 +19,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -30,7 +31,6 @@ public:
     QGridLayout *gridLayout;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents_2;
-    QGridLayout *gridLayout_2;
     QLabel *label;
     QLabel *label_16;
     QPushButton *pushButton;
@@ -58,18 +58,20 @@ public:
     QCommandLinkButton *commandLinkButton_14;
     QLabel *label_15;
     QCommandLinkButton *commandLinkButton_15;
+    QTableWidget *tablaProdu;
+    QPushButton *Pagar;
 
     void setupUi(QScrollArea *VentCatalogo)
     {
         if (VentCatalogo->objectName().isEmpty())
             VentCatalogo->setObjectName(QStringLiteral("VentCatalogo"));
         VentCatalogo->setWindowModality(Qt::NonModal);
-        VentCatalogo->resize(691, 579);
+        VentCatalogo->resize(1306, 628);
         VentCatalogo->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
         VentCatalogo->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 689, 577));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 1304, 626));
         gridLayout = new QGridLayout(scrollAreaWidgetContents);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         scrollArea = new QScrollArea(scrollAreaWidgetContents);
@@ -105,182 +107,132 @@ public:
         scrollArea->setAlignment(Qt::AlignCenter);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(-315, 0, 967, 2833));
-        gridLayout_2 = new QGridLayout(scrollAreaWidgetContents_2);
-        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(8, 8, 1262, 584));
         label = new QLabel(scrollAreaWidgetContents_2);
         label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(435, 12, 156, 43));
         QFont font;
         font.setFamily(QStringLiteral("Matura MT Script Capitals"));
         font.setPointSize(36);
         label->setFont(font);
-
-        gridLayout_2->addWidget(label, 0, 2, 1, 2);
-
         label_16 = new QLabel(scrollAreaWidgetContents_2);
         label_16->setObjectName(QStringLiteral("label_16"));
+        label_16->setGeometry(QRect(857, 12, 16, 16));
         label_16->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/carrito.jpg")));
-
-        gridLayout_2->addWidget(label_16, 0, 4, 2, 1);
-
         pushButton = new QPushButton(scrollAreaWidgetContents_2);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-
-        gridLayout_2->addWidget(pushButton, 0, 5, 1, 1);
-
+        pushButton->setGeometry(QRect(1020, 50, 99, 32));
         label_4 = new QLabel(scrollAreaWidgetContents_2);
         label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(12, 69, 271, 31));
         QFont font1;
         font1.setFamily(QStringLiteral("Matura MT Script Capitals"));
         font1.setPointSize(26);
         label_4->setFont(font1);
-
-        gridLayout_2->addWidget(label_4, 1, 0, 1, 2);
-
         label_3 = new QLabel(scrollAreaWidgetContents_2);
         label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(12, 110, 16, 16));
         label_3->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/cocina3.jpg")));
-
-        gridLayout_2->addWidget(label_3, 2, 0, 1, 3);
-
         label_2 = new QLabel(scrollAreaWidgetContents_2);
         label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(646, 110, 16, 16));
         label_2->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/cocina1.jpg")));
-
-        gridLayout_2->addWidget(label_2, 2, 3, 1, 3);
-
         commandLinkButton = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton->setObjectName(QStringLiteral("commandLinkButton"));
+        commandLinkButton->setGeometry(QRect(6, 136, 209, 40));
         QFont font2;
         font2.setFamily(QStringLiteral("Roboto"));
         commandLinkButton->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton, 3, 0, 1, 1);
-
         commandLinkButton_4 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_4->setObjectName(QStringLiteral("commandLinkButton_4"));
+        commandLinkButton_4->setGeometry(QRect(640, 136, 209, 40));
         commandLinkButton_4->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_4, 3, 3, 1, 1);
-
         label_5 = new QLabel(scrollAreaWidgetContents_2);
         label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(12, 182, 16, 16));
         label_5->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/cocina4.jpg")));
-
-        gridLayout_2->addWidget(label_5, 4, 0, 1, 3);
-
         label_6 = new QLabel(scrollAreaWidgetContents_2);
         label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setGeometry(QRect(646, 182, 16, 16));
         label_6->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/cocina2.jpg")));
-
-        gridLayout_2->addWidget(label_6, 4, 3, 1, 3);
-
         commandLinkButton_3 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_3->setObjectName(QStringLiteral("commandLinkButton_3"));
+        commandLinkButton_3->setGeometry(QRect(6, 208, 209, 40));
         commandLinkButton_3->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_3, 5, 0, 1, 1);
-
         commandLinkButton_9 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_9->setObjectName(QStringLiteral("commandLinkButton_9"));
+        commandLinkButton_9->setGeometry(QRect(640, 208, 209, 40));
         commandLinkButton_9->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_9, 5, 3, 1, 1);
-
         label_7 = new QLabel(scrollAreaWidgetContents_2);
         label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setGeometry(QRect(12, 254, 247, 31));
         label_7->setFont(font1);
-
-        gridLayout_2->addWidget(label_7, 6, 0, 1, 2);
-
         label_8 = new QLabel(scrollAreaWidgetContents_2);
         label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setGeometry(QRect(12, 295, 16, 16));
         label_8->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/ba\303\261o1.jpg")));
-
-        gridLayout_2->addWidget(label_8, 7, 0, 1, 3);
-
         commandLinkButton_10 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_10->setObjectName(QStringLiteral("commandLinkButton_10"));
+        commandLinkButton_10->setGeometry(QRect(6, 321, 209, 40));
         commandLinkButton_10->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_10, 8, 0, 1, 1);
-
         label_9 = new QLabel(scrollAreaWidgetContents_2);
         label_9->setObjectName(QStringLiteral("label_9"));
+        label_9->setGeometry(QRect(12, 367, 323, 31));
         label_9->setFont(font1);
-
-        gridLayout_2->addWidget(label_9, 9, 0, 1, 3);
-
         label_10 = new QLabel(scrollAreaWidgetContents_2);
         label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setGeometry(QRect(12, 408, 16, 16));
         label_10->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/armario.jpg")));
-
-        gridLayout_2->addWidget(label_10, 10, 0, 1, 1);
-
         label_11 = new QLabel(scrollAreaWidgetContents_2);
         label_11->setObjectName(QStringLiteral("label_11"));
+        label_11->setGeometry(QRect(223, 408, 16, 16));
         label_11->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/armario2.jpg")));
-
-        gridLayout_2->addWidget(label_11, 10, 1, 1, 4);
-
         commandLinkButton_11 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_11->setObjectName(QStringLiteral("commandLinkButton_11"));
+        commandLinkButton_11->setGeometry(QRect(6, 434, 209, 40));
         commandLinkButton_11->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_11, 11, 0, 1, 1);
-
         commandLinkButton_12 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_12->setObjectName(QStringLiteral("commandLinkButton_12"));
+        commandLinkButton_12->setGeometry(QRect(429, 434, 209, 40));
         commandLinkButton_12->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_12, 11, 2, 1, 1);
-
         label_12 = new QLabel(scrollAreaWidgetContents_2);
         label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setGeometry(QRect(12, 480, 252, 31));
         label_12->setFont(font1);
-
-        gridLayout_2->addWidget(label_12, 12, 0, 1, 2);
-
         label_13 = new QLabel(scrollAreaWidgetContents_2);
         label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setGeometry(QRect(12, 521, 16, 16));
         label_13->setStyleSheet(QLatin1String("#ventCatalogo{\n"
 "	\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));\n"
 "}"));
         label_13->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/vario1.jpg")));
-
-        gridLayout_2->addWidget(label_13, 13, 0, 1, 3);
-
         label_14 = new QLabel(scrollAreaWidgetContents_2);
         label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setGeometry(QRect(646, 521, 16, 16));
         label_14->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/vario3.jpg")));
-
-        gridLayout_2->addWidget(label_14, 13, 3, 1, 1);
-
         commandLinkButton_13 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_13->setObjectName(QStringLiteral("commandLinkButton_13"));
+        commandLinkButton_13->setGeometry(QRect(6, 547, 209, 40));
         commandLinkButton_13->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_13, 14, 0, 1, 1);
-
         commandLinkButton_14 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_14->setObjectName(QStringLiteral("commandLinkButton_14"));
+        commandLinkButton_14->setGeometry(QRect(640, 547, 209, 40));
         commandLinkButton_14->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_14, 14, 3, 1, 1);
-
         label_15 = new QLabel(scrollAreaWidgetContents_2);
         label_15->setObjectName(QStringLiteral("label_15"));
+        label_15->setGeometry(QRect(12, 593, 16, 16));
         label_15->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/1.0/Imagenes/vario2.jpg")));
-
-        gridLayout_2->addWidget(label_15, 15, 0, 1, 3);
-
         commandLinkButton_15 = new QCommandLinkButton(scrollAreaWidgetContents_2);
         commandLinkButton_15->setObjectName(QStringLiteral("commandLinkButton_15"));
+        commandLinkButton_15->setGeometry(QRect(6, 619, 209, 40));
         commandLinkButton_15->setFont(font2);
-
-        gridLayout_2->addWidget(commandLinkButton_15, 16, 0, 1, 1);
-
+        tablaProdu = new QTableWidget(scrollAreaWidgetContents_2);
+        tablaProdu->setObjectName(QStringLiteral("tablaProdu"));
+        tablaProdu->setGeometry(QRect(915, 110, 311, 371));
+        Pagar = new QPushButton(scrollAreaWidgetContents_2);
+        Pagar->setObjectName(QStringLiteral("Pagar"));
+        Pagar->setGeometry(QRect(1010, 500, 141, 51));
         scrollArea->setWidget(scrollAreaWidgetContents_2);
 
         gridLayout->addWidget(scrollArea, 0, 0, 1, 1);
@@ -322,6 +274,7 @@ public:
         commandLinkButton_14->setText(QApplication::translate("VentCatalogo", "Agregar al Carrito", Q_NULLPTR));
         label_15->setText(QString());
         commandLinkButton_15->setText(QApplication::translate("VentCatalogo", "Agregar al Carrito", Q_NULLPTR));
+        Pagar->setText(QApplication::translate("VentCatalogo", "PAGAR", Q_NULLPTR));
     } // retranslateUi
 
 };

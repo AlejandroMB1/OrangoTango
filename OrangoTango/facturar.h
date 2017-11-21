@@ -15,6 +15,9 @@ public:
     explicit Facturar(QWidget *parent = 0);
     ~Facturar();
 
+private slots:
+    void on_BotonPagar_clicked();
+
 private:
     Ui::Facturar *ui;
 };

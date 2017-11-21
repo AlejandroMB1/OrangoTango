@@ -145,10 +145,10 @@ public:
 
     void retranslateUi(QWidget *AgregarProducto)
     {
-        AgregarProducto->setWindowTitle(QApplication::translate("AgregarProducto", "Form", Q_NULLPTR));
+        AgregarProducto->setWindowTitle(QApplication::translate("AgregarProducto", "Agregar Producto", Q_NULLPTR));
         BotonAgregarProducto->setText(QApplication::translate("AgregarProducto", "Agregar Producto", Q_NULLPTR));
         label->setText(QApplication::translate("AgregarProducto", "Codigo:", Q_NULLPTR));
-        label_2->setText(QApplication::translate("AgregarProducto", "Descripci\303\263n:", Q_NULLPTR));
+        label_2->setText(QApplication::translate("AgregarProducto", "Nombre:", Q_NULLPTR));
         label_3->setText(QApplication::translate("AgregarProducto", "Alto:", Q_NULLPTR));
         label_4->setText(QApplication::translate("AgregarProducto", "Largo:", Q_NULLPTR));
         label_5->setText(QApplication::translate("AgregarProducto", "Ancho:", Q_NULLPTR));

@@ -13,49 +13,29 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QDialog>
-#include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Ventana
 {
 public:
-    QDialogButtonBox *buttonBox;
-    QLabel *label;
-    QLabel *label_2;
 
-    void setupUi(QDialog *Ventana)
+    void setupUi(QWidget *Ventana)
     {
         if (Ventana->objectName().isEmpty())
             Ventana->setObjectName(QStringLiteral("Ventana"));
         Ventana->resize(400, 300);
-        buttonBox = new QDialogButtonBox(Ventana);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(30, 240, 341, 32));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-        label = new QLabel(Ventana);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(30, 40, 121, 31));
-        label_2 = new QLabel(Ventana);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(160, 40, 71, 31));
 
         retranslateUi(Ventana);
-        QObject::connect(buttonBox, SIGNAL(accepted()), Ventana, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), Ventana, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(Ventana);
     } // setupUi
 
-    void retranslateUi(QDialog *Ventana)
+    void retranslateUi(QWidget *Ventana)
     {
-        Ventana->setWindowTitle(QApplication::translate("Ventana", "Dialog", Q_NULLPTR));
-        label->setText(QApplication::translate("Ventana", "Cantidad de Productos: ", Q_NULLPTR));
-        label_2->setText(QString());
+        Ventana->setWindowTitle(QApplication::translate("Ventana", "Form", Q_NULLPTR));
     } // retranslateUi
 
 };

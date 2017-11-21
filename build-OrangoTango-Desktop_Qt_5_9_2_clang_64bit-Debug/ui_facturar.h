@@ -31,16 +31,12 @@ public:
     QLineEdit *lineNit;
     QLineEdit *lineTelefono;
     QLineEdit *lineCliente;
-    QLineEdit *lineCodigoP;
     QDateTimeEdit *Fecha;
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
     QLabel *label_5;
-    QLabel *label_6;
-    QPushButton *BotonAgregar;
-    QPushButton *BotonLimpiar;
     QTableWidget *tablaProductos;
     QPushButton *BotonPagar;
     QLineEdit *lineNfactura;
@@ -63,9 +59,6 @@ public:
         lineCliente = new QLineEdit(Facturar);
         lineCliente->setObjectName(QStringLiteral("lineCliente"));
         lineCliente->setGeometry(QRect(280, 110, 171, 21));
-        lineCodigoP = new QLineEdit(Facturar);
-        lineCodigoP->setObjectName(QStringLiteral("lineCodigoP"));
-        lineCodigoP->setGeometry(QRect(30, 170, 191, 21));
         Fecha = new QDateTimeEdit(Facturar);
         Fecha->setObjectName(QStringLiteral("Fecha"));
         Fecha->setGeometry(QRect(360, 10, 141, 24));
@@ -96,19 +89,9 @@ public:
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setGeometry(QRect(280, 90, 60, 16));
         label_5->setFont(font);
-        label_6 = new QLabel(Facturar);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(30, 150, 131, 16));
-        label_6->setFont(font);
-        BotonAgregar = new QPushButton(Facturar);
-        BotonAgregar->setObjectName(QStringLiteral("BotonAgregar"));
-        BotonAgregar->setGeometry(QRect(230, 161, 81, 41));
-        BotonLimpiar = new QPushButton(Facturar);
-        BotonLimpiar->setObjectName(QStringLiteral("BotonLimpiar"));
-        BotonLimpiar->setGeometry(QRect(320, 161, 71, 41));
         tablaProductos = new QTableWidget(Facturar);
         tablaProductos->setObjectName(QStringLiteral("tablaProductos"));
-        tablaProductos->setGeometry(QRect(30, 220, 491, 161));
+        tablaProductos->setGeometry(QRect(30, 180, 491, 201));
         tablaProductos->setRowCount(0);
         tablaProductos->setColumnCount(0);
         tablaProductos->horizontalHeader()->setCascadingSectionResizes(false);
@@ -137,9 +120,6 @@ public:
         label_3->setText(QApplication::translate("Facturar", "Fecha", Q_NULLPTR));
         label_4->setText(QApplication::translate("Facturar", "Nit", Q_NULLPTR));
         label_5->setText(QApplication::translate("Facturar", "Cliente", Q_NULLPTR));
-        label_6->setText(QApplication::translate("Facturar", "Codigo Producto", Q_NULLPTR));
-        BotonAgregar->setText(QApplication::translate("Facturar", "Agregar", Q_NULLPTR));
-        BotonLimpiar->setText(QApplication::translate("Facturar", "Limpiar", Q_NULLPTR));
         BotonPagar->setText(QApplication::translate("Facturar", "Pagar", Q_NULLPTR));
         label_7->setText(QApplication::translate("Facturar", "N Factura", Q_NULLPTR));
     } // retranslateUi

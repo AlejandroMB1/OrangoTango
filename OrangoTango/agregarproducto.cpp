@@ -7,6 +7,32 @@ AgregarProducto::AgregarProducto(QWidget *parent) :
     ui(new Ui::AgregarProducto)
 {
     ui->setupUi(this);
+
+    QRegExp expreCodigo("((?:[0-9]{1,10}))");
+    ui->lineCodigo->setValidator(new QRegExpValidator(expreCodigo,this));
+
+    QRegExp expreDescri("((?:[a-zA-Záéíóú]{3,20}))");
+    ui->lineDescri->setValidator(new QRegExpValidator(expreDescri,this));
+
+    QRegExp expreAlto("((?:[0-9]{1,6}))");
+    ui->lineAlto->setValidator(new QRegExpValidator(expreAlto,this));
+
+    QRegExp expreLargo("((?:[0-9]{1,6}))");
+    ui->lineLargo->setValidator(new QRegExpValidator(expreLargo,this));
+
+    QRegExp expreAncho("((?:[0-9]{1,6}))");
+    ui->lineAncho->setValidator(new QRegExpValidator(expreAncho,this));
+
+    QRegExp expreColor("((?:[a-zA-Záéíóú]{3,20}))");
+    ui->lineColor->setValidator(new QRegExpValidator(expreColor,this));
+
+    QRegExp exprePrecio("((?:[0-9]{1,8}))");
+    ui->linePrecio->setValidator(new QRegExpValidator(exprePrecio,this));
+
+    QRegExp expreCosto("((?:[0-9]{1,8}))");
+    ui->lineCosto->setValidator(new QRegExpValidator(expreCosto,this));
+
+
 }
 
 AgregarProducto::~AgregarProducto()

@@ -64,6 +64,7 @@ public:
     QLabel *label_7;
     QFrame *line_4;
     QPushButton *atras;
+    QPushButton *Buscar;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
     QMenu *menuAyuda;
@@ -72,7 +73,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(770, 633);
+        MainWindow->resize(788, 633);
         MainWindow->setStyleSheet(QString::fromUtf8("/*Cambiamos el color de la ventana*/\n"
 "\n"
 "	#MainWindow{\n"
@@ -86,7 +87,7 @@ public:
 "	}\n"
 "\n"
 "	/*Estilos para el bot\303\263n*/\n"
-"	#atras,#BotonIniciarS,#BotonNDisenos,#BotonProyectos,#BotonRegistrarse{\n"
+"	#atras,#BotonIniciarS,#BotonNDisenos,#BotonProyectos,#BotonRegistrarse,#Buscar{\n"
 "		\n"
 "	background-color: rgb(143, 71, 0);\n"
 "		border-radius: 4px;\n"
@@ -99,7 +100,7 @@ public:
 "	/*Definimos el estilo para un efecto hover sobre el bot\303\263n,\n"
 "	este cambiar\303\241 su background cuando pasemos el mouse por\n"
 "	encima*/\n"
-"	#atras:hover,#BotonIniciarS:hover,#BotonNDisenos:hover,#BotonProyectos:hover,#BotonRegistrarse:hover{\n"
+"	#atras:hover,#BotonIniciarS:hover,#BotonNDisenos:hover,#BotonProyectos:hover,#BotonRegistrarse:hover,#Buscar:hover{\n"
 "		\n"
 "	background-color: #ff7043;;\n"
 "	}\n"
@@ -113,8 +114,8 @@ public:
 "		color: rgb(143, 71, 0);\n"
 "	}\n"
 "	\n"
-"	#frame,#frame_2,#frame_3,#fra"
-                        "me_4{\n"
+"	#frame,"
+                        "#frame_2,#frame_3,#frame_4{\n"
 "	\n"
 "	background-color: rgb(143, 71, 0);\n"
 "	}"));
@@ -246,13 +247,16 @@ public:
         atras = new QPushButton(centralWidget);
         atras->setObjectName(QStringLiteral("atras"));
         atras->setGeometry(QRect(0, 560, 113, 32));
+        Buscar = new QPushButton(centralWidget);
+        Buscar->setObjectName(QStringLiteral("Buscar"));
+        Buscar->setGeometry(QRect(640, 200, 113, 41));
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 770, 22));
+        menuBar->setGeometry(QRect(0, 0, 788, 22));
         menuAyuda = new QMenu(menuBar);
         menuAyuda->setObjectName(QStringLiteral("menuAyuda"));
         MainWindow->setMenuBar(menuBar);
@@ -300,6 +304,7 @@ public:
         BotonRegistrarse->setText(QApplication::translate("MainWindow", "Registrarse", Q_NULLPTR));
         label_7->setText(QApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:16pt; color:#8f4700;\">-Muebles Comedor</span></p></body></html>", Q_NULLPTR));
         atras->setText(QApplication::translate("MainWindow", "Atras", Q_NULLPTR));
+        Buscar->setText(QApplication::translate("MainWindow", "Buscar", Q_NULLPTR));
         menuAyuda->setTitle(QApplication::translate("MainWindow", "Ayuda", Q_NULLPTR));
     } // retranslateUi
 

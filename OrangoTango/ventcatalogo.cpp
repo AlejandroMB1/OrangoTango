@@ -8,6 +8,11 @@ VentCatalogo::VentCatalogo(QWidget *parent) :
 {
     ui->setupUi(this);
     carro = new Carrito();
+    QStringList titulos;
+    ui->tablaProdu->setColumnCount(3);
+    titulos<<"Producto"<<"Cantidad"<<"Precio Unidad";
+    ui->tablaProdu->setHorizontalHeaderLabels(titulos);
+
 
 }
 
@@ -24,10 +29,12 @@ void VentCatalogo::on_commandLinkButton_clicked()
         exit(1);
     }
     string linea;
-    string codigoProducto = "001";
+    string nombre= "meson";
     int a= 0;
+    int i=0;
     while(getline(productos,linea)){
-       if(linea.find(codigoProducto) != string::npos){
+        i++;
+       if(linea.find(nombre) != string::npos){
             a = 1;
             QString codigo = "001";
             QString descripcion = "meson de cocina";
@@ -39,6 +46,8 @@ void VentCatalogo::on_commandLinkButton_clicked()
             QString costo = "500.000";
             Producto *mesonCocina = new Producto(codigo,descripcion,alto,largo,ancho,color,precio,costo);
             carro->agregarProducto(mesonCocina);
+            QMessageBox::information(this,"Información","Producto agregado correctamente");
+
             break;
         }
     }
@@ -55,11 +64,12 @@ void VentCatalogo::on_commandLinkButton_4_clicked()
         QMessageBox::information(this,"Información","error, el archivo txt no se pudo abrir");
         exit(1);
     }
+    string nombre = "mesonCocina";
     string linea;
     string codigoProducto = "002";
     int a= 0;
     while(getline(productos,linea)){
-       if(linea.find(codigoProducto) != string::npos){
+       if(linea.find(nombre) != string::npos){
             a = 1;
             break;
         }
@@ -77,11 +87,12 @@ void VentCatalogo::on_commandLinkButton_3_clicked()
         QMessageBox::information(this,"Información","error, el archivo txt no se pudo abrir");
         exit(1);
     }
+    string nombre = "mesonBano";
     string linea;
     string codigoProducto = "003";
     int a= 0;
     while(getline(productos,linea)){
-       if(linea.find(codigoProducto) != string::npos){
+       if(linea.find(nombre) != string::npos){
             a = 1;
             break;
         }
@@ -99,10 +110,11 @@ void VentCatalogo::on_commandLinkButton_9_clicked()
         exit(1);
     }
     string linea;
+    string nombre = "Vario1";
     string codigoProducto = "004";
     int a= 0;
     while(getline(productos,linea)){
-       if(linea.find(codigoProducto) != string::npos){
+       if(linea.find(nombre) != string::npos){
             a = 1;
             break;
         }
@@ -238,9 +250,29 @@ void VentCatalogo::on_commandLinkButton_15_clicked()
         QMessageBox::information(this,"Información","Este producto no está disponible en estos momentos");
 }
 
-void VentCatalogo::on_pushButton_clicked()
-{
-    Ventana *window = new Ventana();
-    window->show();
+void VentCatalogo::on_pushButton_clicked(){
+
+    int p = 1;
+    int s = carro->productos.size();
+
+    while(p<s){
+
+       // QString nombre = carro->productos[p]->getDescripcion();
+
+        QTableWidgetItem *item = new QTableWidgetItem(carro->productos[p]->getDescripcion());
+        ui->tablaProdu->setItem(p,1,item);
+        p++;
+    }
+
+}
+
+
+
+
+
+void VentCatalogo::on_Pagar_clicked(){
+
+    Facturar *ventana = new Facturar();
+    ventana->show();
 
 }
